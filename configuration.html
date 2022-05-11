@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src='https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js'></script>
+</head>
+
+<body>
+    <p id='message' class="centered"></p>
+</body>
+
+<script>
+    microsoftTeams.initialize();
+    
+    const auAppId = getQueryParam('clientId');
+
+    const p = document.getElementById("message");
+    p.innerHTML = !auAppId ? "The tab's configureUrl setting (manifest file) is missing Aurinko clientId parameter." : "Please proceed by clicking Save.";
+
+    let wlo = window.location.origin
+
+    microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+        microsoftTeams.settings.setSettings({
+            websiteUrl: wlo,
+            contentUrl: wlo + "?clientId=" + auAppId,
+            entityId: 'Aurinko tab',
+            suggestedDisplayName: "Rf Sync"
+        });
+        saveEvent.notifySuccess();
+    });
+            
+    function getQueryParam (name) {
+        const entry = window.location.search.substring(1).split('&').find(el => el.startsWith('is='))
+
+        if (!entry) {
+            return null
+        } else return entry.split('=')[1]
+    }
+
+</script>
+</html>

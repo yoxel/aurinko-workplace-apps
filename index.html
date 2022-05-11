@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aurinko tab</title>
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+
+    <body>
+        <div class="centered">
+            <div id="unauthorized" class="content">
+
+                <p class="message">Confirm your Microsoft id.</p>
+
+                <p id="error-message" style="display: none;"></p>
+
+                <button onclick="startAuthorization()">Authorize</button>
+
+            </div>
+        
+            <div id="authorized" style="display: none;" class="content">
+                <p class="message">Welcome!</p>
+            </div> 
+        
+        </div>
+    </body>
+</html>
