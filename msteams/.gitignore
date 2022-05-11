@@ -1,0 +1,23 @@
+.cache
+.cache-main
+.classpath
+.project
+.settings/
+/.idea/
+/.idea_modules/
+bin/
+.bloop/
+/.metals/
+.bsp
+/project/**/metals.sbt
+/project/project
+/.vscode/
+
+# User specific
+/.jvmopts
+/.sbtopts
+
+# mac
+.DS_Store
+# Local Netlify folder
+.netlify
