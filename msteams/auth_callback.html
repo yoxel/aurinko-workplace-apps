@@ -16,7 +16,6 @@
             if (status == 'success') {
                 console.log('success');
                 microsoftTeams.authentication.notifySuccess();
-                console.log('After notify success');
             } else {
                 console.log('error');
                 var details = urlParams.get('details');

@@ -13,6 +13,7 @@ bin/
 /project/project
 /.vscode/
 
+
 # User specific
 /.jvmopts
 /.sbtopts

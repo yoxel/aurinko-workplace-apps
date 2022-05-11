@@ -25,15 +25,15 @@
     microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
         microsoftTeams.settings.setSettings({
             websiteUrl: wlo,
-            contentUrl: wlo + "?clientId=" + auAppId,
-            entityId: 'Aurinko tab',
-            suggestedDisplayName: "Rf Sync"
+            contentUrl: wlo + "/?clientId=" + auAppId,
+            entityId: 'Aurinko_tab',
+            suggestedDisplayName: "Aurinko tab"
         });
         saveEvent.notifySuccess();
     });
             
     function getQueryParam (name) {
-        const entry = window.location.search.substring(1).split('&').find(el => el.startsWith('is='))
+        const entry = window.location.search.substring(1).split('&').find(el => el.startsWith('clientId='))
 
         if (!entry) {
             return null
