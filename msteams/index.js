@@ -1,4 +1,4 @@
-// microsoftTeams.initialize()
+microsoftTeams.initialize()
 
 let wlo = window.location.origin
 
