@@ -1,2 +1,5 @@
-/v1/*  https://api.aurinko.io/v1/:splat  200
-/auth/login https://api.aurinko.io/auth/login  301
+#/v1/*  https://api.aurinko.io/v1/:splat  200
+#/auth/login https://api.aurinko.io/auth/login  301
+
+/v1/*  https://asti.aurinko.io/v1/:splat  200
+/auth/login https://asti.aurinko.io/auth/login  301

@@ -8,7 +8,8 @@ window.onerror = function(e) {
 let wlo = window.location.origin
 
 let auClientId = getQueryParam('clientId')
-var apiUrl = 'https://api.aurinko.io/v1'
+// var apiUrl = 'https://api.aurinko.io/v1'
+var apiUrl = wlo + '/v1'
 
 let beforeAuthView, afterAuthView, errorView, loginInfo, usernameView, userEmailView
 
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 
 let authUrl = function() {
-    return `${apiUrl}/auth/authorize/clientId=${auClientId}&serviceType=Office365&userAccount=primary&returnUrl=${wlo}/auth_callback.html`
+    return `${wlo}/auth/authorize/clientId=${auClientId}&serviceType=Office365&userAccount=primary&returnUrl=${wlo}/auth_callback.html`
 }
 
 function startAuthorization () {
