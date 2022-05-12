@@ -86,6 +86,8 @@ function apiRequest(method, path, headers, onSuccess) {
     xhr.responseType = 'json'
 
     for (let header in headers) {
+        console.log(header)
+        console.log(header.valueOf())
         xhr.setRequestHeader(...header)
     }
 
