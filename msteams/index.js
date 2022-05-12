@@ -63,7 +63,7 @@ function startAuthorization () {
 }
 
 function showAccInfo() {
-    const primaryAccount = auAccounts().find(acc => acc.primary)
+    const primaryAccount = auAccounts().find(acc => acc.userAccountType == 'primary')
 
     if(primaryAccount) {
         usernameView.innerHTML = primaryAccount.name
@@ -74,9 +74,12 @@ function showAccInfo() {
 }
 
 function auAccounts() {
+    var accounts
     apiRequest('GET', '/user/accounts', auHeaders, function(response) {
-        return response.records
+        accounts = response.records
     })
+
+    return accounts
 }
 
 function apiRequest(method, path, headers, onSuccess) {
