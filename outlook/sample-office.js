@@ -56,6 +56,7 @@ Office.initialize = function (reason) {
                             console.log(res);
                             let email = JSON.parse(res.response)['email'];
                             showUserEmail(email);
+                            hideAuth();
                         });
                     };
 
@@ -93,6 +94,13 @@ function request(method, url, headers, ready) {
 
 function showUserEmail(email) {
     var div = document.createElement('div');
-    div.innerHTML = '<p>User Email: ' + email + '</p>'
+    div.innerHTML = '<p>Welcome. You have successfully logged in.</p>'
     document.body.appendChild(div)
+}
+
+function hideAuth() {
+    let auth = document.getElementById('auth');
+    if (auth !== undefined) {
+        auth.hidden = true;
+    }
 }
