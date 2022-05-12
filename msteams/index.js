@@ -63,23 +63,23 @@ function startAuthorization () {
 }
 
 function showAccInfo() {
-    const primaryAccount = auAccounts().find(acc => acc.userAccountType == 'primary')
+    auAccounts(function(accounts){
+        const primaryAccount = accounts.find(acc => acc.userAccountType == 'primary')
 
-    if(primaryAccount) {
-        usernameView.innerHTML = primaryAccount.name
-        userEmailView.innerHTML = primaryAccount.email
-
-        loginInfo.style.display = 'block'
-    }
+        if(primaryAccount) {
+            usernameView.innerHTML = primaryAccount.name
+            userEmailView.innerHTML = primaryAccount.email
+    
+            loginInfo.style.display = 'block'
+        }
+    })
 }
 
-function auAccounts() {
-    var accounts
+function auAccounts(callback) {
+    
     apiRequest('GET', '/user/accounts', auHeaders, function(response) {
-        accounts = response.records
+        callback(response.records)
     })
-
-    return accounts
 }
 
 function apiRequest(method, path, headers, onSuccess) {
