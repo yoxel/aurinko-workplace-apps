@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 
 let authUrl = function() {
-    return `${wlo}/auth/authorize/clientId=${auClientId}&serviceType=Office365&userAccount=primary&returnUrl=${wlo}/auth_callback.html`
+    return `${wlo}/auth/authorize/clientId=${auClientId}&serviceType=Office365&userAccount=primary&returnUrl=${wlo}/msteams/auth_callback.html`
 }
 
 function startAuthorization () {
