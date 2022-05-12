@@ -108,8 +108,13 @@ function apiRequest(method, path, headers, onSuccess) {
 
 
 function showError(message) {
-    console.log('showError')
-    errorView.innerHTML = message ? message : 'Unkown error.'
+    console.log('showError ' + message)
+    if (message){
+        errorView.innerHTML = message
+    } else {
+        errorView.innerHTML = 'Unknown message.'
+    }
+    
     errorView.style.display = 'block'
 }
 
