@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js'></script>
+    <title>Auth callback</title>
+</head>
+     <body>
+
+        <script type="text/javascript">
+            microsoftTeams.initialize();
+
+            var urlParams = new URLSearchParams(window.location.search);
+            var status = urlParams.get('status');
+            if (status == 'success') {
+                console.log('success');
+                microsoftTeams.authentication.notifySuccess();
+            } else {
+                console.log('error');
+                var details = urlParams.get('details');
+                microsoftTeams.authentication.notifyFailure(details);
+            }
+        </script>   
+    </body>
+</html>

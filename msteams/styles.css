@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+:root {
+    --theme-primary: #6568A8;
+    --theme-primary-dark: #494C7D;
+
+    --theme-secondary: rgba(0, 0, 0, .87);
+    --theme-error: #d23f31;
+    --light-grey: #f5f5f5;
+}
+
+html {
+    background-color: #fff !important;
+    color: var(--theme-secondary);
+    font: 400 15px 'Nunito', 'Noto', sans-serif;
+}
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1rem;
+}
+
+.content {
+    width: 30rem;
+    max-width: 60vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message {
+    margin: 1rem 0;
+}
+
+#error-message{
+    background-color: var(--light-grey);
+    color: var(--theme-error);
+    padding: .5rem .4rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    color: #fff;
+    background-color: var(--theme-primary);
+    border: 1px solid var(--theme-primary);
+    border-radius: 0.25rem;
+    line-height: 1.5;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+   
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--theme-primary-dark);
+    border-color: var(--theme-primary-dark);
+}
+
+button:focus {
+    outline: 0;
+    box-shadow: 0 15px 20px rgba(130, 138, 145, 0.5);
+  }
