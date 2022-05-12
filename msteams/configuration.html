@@ -20,6 +20,8 @@
     const p = document.getElementById("message");
     p.innerHTML = !auAppId ? "The tab's configureUrl setting (manifest file) is missing Aurinko clientId parameter." : "Please proceed by clicking Save.";
 
+    microsoftTeams.settings.setValidityState(auAppId)
+
     let wlo = window.location.origin
 
     microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
