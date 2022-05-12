@@ -11,15 +11,22 @@
         <script type="text/javascript">
             microsoftTeams.initialize();
 
-            var urlParams = new URLSearchParams(window.location.search);
-            var status = urlParams.get('status');
+            var status = getQueryParam('status');
             if (status == 'success') {
                 console.log('success');
                 microsoftTeams.authentication.notifySuccess();
             } else {
                 console.log('error');
-                var details = urlParams.get('details');
+                var details = getQueryParam('details');
                 microsoftTeams.authentication.notifyFailure(details);
+            }
+
+            function getQueryParam (name) {
+                const entry = window.location.search.substring(1).split('&').find(el => el.startsWith(name))
+
+                if (!entry) {
+                    return null
+                } else return entry.split('=')[1]
             }
         </script>   
     </body>
