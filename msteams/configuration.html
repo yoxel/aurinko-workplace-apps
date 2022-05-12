@@ -33,7 +33,7 @@
     });
             
     function getQueryParam (name) {
-        const entry = window.location.search.substring(1).split('&').find(el => el.startsWith('clientId='))
+        const entry = window.location.search.substring(1).split('&').find(el => el.startsWith(name))
 
         if (!entry) {
             return null

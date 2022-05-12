@@ -3,20 +3,34 @@ microsoftTeams.initialize()
 let wlo = window.location.origin
 
 let auClientId = getQueryParam('clientId')
+var apiUrl = 'https://api.aurinko.io/v1'
 
-let beforeAuthView
-let afterAuthView
-let errorView
+let beforeAuthView, afterAuthView, errorView, loginInfo, usernameView, userEmailView
 
-document.addEventListener("DOMContentLoaded", function(event) {
+
+let auClientIdHeader = ['X-Aurinko-ClientId', auClientId]
+let contentTypeHeader = ['Content-Type', 'application/json']
+
+let auHeaders = [auClientIdHeader, contentTypeHeader]
+
+document.addEventListener("DOMContentLoaded", function(e) {
 
     beforeAuthView = document.getElementById('unauthorized')
     afterAuthView = document.getElementById('authorized')
     errorView = document.getElementById('error-message')
-  })
+    loginInfo = document.getElementById('login-info')
+    usernameView = document.getElementById('username')
+    userEmailView = document.getElementById('email')
+})
+
+window.onerror = function(e) {
+    console.log(e)
+    showError(e)
+}
+
 
 let authUrl = function() {
-    return `https://api.aurinko.io/auth/authorize/clientId=${auClientId}&serviceType=Office365&userAccount=primary&returnUrl=${wlo}/auth_callback.html`
+    return `${apiUrl}/auth/authorize/clientId=${auClientId}&serviceType=Office365&userAccount=primary&returnUrl=${wlo}/auth_callback.html`
 }
 
 function startAuthorization () {
@@ -30,34 +44,74 @@ function startAuthorization () {
         height: 530,
 
         successCallback: function (result) {
-            beforeAuthView.style.display = 'none'
-            errorView.style.display = 'none'
-
+            hideError()
             afterAuthView.style.display = 'block'
+            showAccInfo()
         },
         
         failureCallback: function (reason) {
-
-            errorView.innerHTML = reason
-            errorView.style.display = 'block'
-
+            showError(reason)
         }
     })
 }
 
-window.onerror = function(e) {
-    console.log(e)
-    errorView.innerHTML = e
+function showAccInfo() {
+    const primaryAccount = auAccounts().find(acc => acc.primary)
+
+    if(primaryAccount) {
+        usernameView.innerHTML = primaryAccount.name
+        userEmailView.innerHTML = primaryAccount.email
+
+        loginInfo.style.display = block
+    }
+}
+
+function auAccounts() {
+    apiRequest('GET', '/user/accounts', auHeaders, function(response) {
+        return response.records
+    })
+}
+
+function apiRequest(method, path, headers, onSuccess) {
+    var xhr = new XMLHttpRequest()
+
+    xhr.open(method, `${apiUrl}${path}`)
+    xhr.responseType = 'json'
+
+    for (let header in headers) {
+        xhr.setRequestHeader(...header)
+    }
+
+    xhr.onload = function() {
+        if (200 <= xhr.status <= 300) {
+            hideError()
+            onSuccess(xhr.response)
+
+        } else {
+            throw `ApiException: ${xhr.status}. ${xhr.response.message}`
+        }
+    }
+
+    xhr.send()
+}
+
+
+function showError(message) {
+    errorView.innerHTML = message
     errorView.style.display = 'block'
 }
 
-function getQueryParam (name, url = window.location.href) {
-    name = name.replace(/[\[\]]/g, '\\$&');
-
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
-    var results = regex.exec(url)
-
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+function hideError() {
+    errorView.innerHTML = ''
+    errorView.style.display = 'none'
 }
+
+
+function getQueryParam (name) {
+    const entry = window.location.search.substring(1).split('&').find(el => el.startsWith(name))
+
+    if (!entry) {
+        return null
+    } else return entry.split('=')[1]
+}
+
