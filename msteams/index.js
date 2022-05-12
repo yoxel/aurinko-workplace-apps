@@ -112,7 +112,7 @@ function showError(message) {
     if (message){
         errorView.innerHTML = message
     } else {
-        errorView.innerHTML = 'Unknown message.'
+        errorView.innerHTML = 'Unknown error.'
     }
     
     errorView.style.display = 'block'

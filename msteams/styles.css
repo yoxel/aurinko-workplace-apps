@@ -14,7 +14,7 @@ html {
     color: var(--theme-secondary);
     font: 400 15px 'Nunito', 'Noto', sans-serif;
 }
-p {
+p, h3 {
     margin: 0;
     padding: 0;
     line-height: 1rem;
@@ -43,6 +43,18 @@ p {
 
 .message {
     margin: 1rem 0;
+}
+
+.grey {
+    color: gray;
+}
+
+.text-small {
+    font-size: .8rem;
+}
+
+.margin-bottom-small {
+    margin-bottom: .5rem;
 }
 
 #error-message{
