@@ -15,12 +15,13 @@
             var status = urlParams.get('status');
             if (status == 'success') {
                 console.log('success');
-                // microsoftTeams.authentication.notifySuccess();
+                microsoftTeams.authentication.notifySuccess();
             } else {
                 console.log('error');
                 var details = urlParams.get('details');
-                // microsoftTeams.authentication.notifyFailure(details);
+                microsoftTeams.authentication.notifyFailure(details);
             }
         </script>   
     </body>
 </html>
+
