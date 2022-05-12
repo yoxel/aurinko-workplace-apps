@@ -47,12 +47,16 @@ function startAuthorization () {
         height: 530,
 
         successCallback: function (result) {
+            console.log('Auth success')
             hideError()
+            beforeAuthView.style.display = 'none'
             afterAuthView.style.display = 'block'
+
             showAccInfo()
         },
         
         failureCallback: function (reason) {
+            console.log('Auth failure')
             showError(reason)
         }
     })
@@ -65,7 +69,7 @@ function showAccInfo() {
         usernameView.innerHTML = primaryAccount.name
         userEmailView.innerHTML = primaryAccount.email
 
-        loginInfo.style.display = block
+        loginInfo.style.display = 'block'
     }
 }
 
@@ -101,7 +105,7 @@ function apiRequest(method, path, headers, onSuccess) {
 
 function showError(message) {
     console.log('showError')
-    errorView.innerHTML = message
+    errorView.innerHTML = message ? message : 'Unkown error.'
     errorView.style.display = 'block'
 }
 
