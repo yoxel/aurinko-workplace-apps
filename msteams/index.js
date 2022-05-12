@@ -85,16 +85,13 @@ function apiRequest(method, path, headers, onSuccess) {
     xhr.open(method, `${apiUrl}${path}`)
     xhr.responseType = 'json'
 
-    console.log('<<headers', headers)
 
     for (let header of headers) {
-        console.log(header)
-        console.log(header.valueOf())
         xhr.setRequestHeader(...header)
     }
 
     xhr.onload = function() {
-        if (200 <= xhr.status <= 300) {
+        if (xhr.status >= 200 && xhr.status <= 300) {
             hideError()
             onSuccess(xhr.response)
 
