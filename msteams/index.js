@@ -87,7 +87,7 @@ function apiRequest(method, path, headers, onSuccess) {
 
     console.log('<<headers', headers)
 
-    for (let header in headers) {
+    for (let header of headers) {
         console.log(header)
         console.log(header.valueOf())
         xhr.setRequestHeader(...header)
