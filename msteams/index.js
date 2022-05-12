@@ -1,5 +1,10 @@
 microsoftTeams.initialize()
 
+window.onerror = function(e) {
+    console.log(e)
+    showError(e)
+}
+
 let wlo = window.location.origin
 
 let auClientId = getQueryParam('clientId')
@@ -21,12 +26,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
     loginInfo = document.getElementById('login-info')
     usernameView = document.getElementById('username')
     userEmailView = document.getElementById('email')
-})
 
-window.onerror = function(e) {
-    console.log(e)
-    showError(e)
-}
+   
+})
 
 
 let authUrl = function() {
@@ -97,6 +99,7 @@ function apiRequest(method, path, headers, onSuccess) {
 
 
 function showError(message) {
+    console.log('showError')
     errorView.innerHTML = message
     errorView.style.display = 'block'
 }
