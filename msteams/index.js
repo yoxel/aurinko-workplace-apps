@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 
 let authUrl = function() {
-    return `${wlo}/v1/auth/authorize?clientId=${auClientId}&serviceType=Office365&userAccount=primary&returnUrl=${encodeURIComponent(wlo + '/msteams/auth_callback.html')}`
+    return wlo +'/v1/auth/authorize?clientId=' + auClientId + '&serviceType=Office365&userAccount=primary&returnUrl=' + encodeURIComponent(wlo + '/msteams/auth_callback.html')
 }
 
 function startAuthorization () {
@@ -85,7 +85,7 @@ function auAccounts(callback) {
 function apiRequest(method, path, headers, onSuccess) {
     var xhr = new XMLHttpRequest()
 
-    xhr.open(method, `${apiUrl}${path}`)
+    xhr.open(method, apiUrl+ path)
     xhr.responseType = 'json'
 
 
@@ -99,7 +99,7 @@ function apiRequest(method, path, headers, onSuccess) {
             onSuccess(xhr.response)
 
         } else {
-            throw `ApiException: ${xhr.status}. ${xhr.response.message}`
+            throw 'ApiException: ' + xhr.status + ' ' + xhr.response.message 
         }
     }
 
