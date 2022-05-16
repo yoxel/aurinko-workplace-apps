@@ -33,7 +33,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 
 let authUrl = function() {
-    return wlo +'/v1/auth/authorize?clientId=' + auClientId + '&serviceType=Office365&userAccount=primary&returnUrl=' + encodeURIComponent(wlo + '/msteams/auth_callback.html')
+    const url =  wlo +'/v1/auth/authorize?clientId=' + auClientId + '&serviceType=Office365&userAccount=primary&returnUrl=' + encodeURIComponent(wlo + '/msteams/auth_callback.html')
+    console.log(url)
+    return url
 }
 
 function startAuthorization () {
