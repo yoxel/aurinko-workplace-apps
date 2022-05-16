@@ -15,7 +15,7 @@
     <IconUrl DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_80.png"/>
     <HighResolutionIconUrl DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_192.png"/>
 
-    <SupportUrl DefaultValue="http://helpdocs.repfabric.info/inbox-app-for-office365"/>
+    <SupportUrl DefaultValue="https://docs.aurinko.io/category/29-workspace-addons"/>
 
     <AppDomains>
         <AppDomain>https://api.aurinko.io/</AppDomain>
