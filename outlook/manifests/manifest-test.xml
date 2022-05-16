@@ -12,8 +12,8 @@
     <DisplayName DefaultValue="Aurinko example"/>
     <Description DefaultValue="Inbox app for Salesforce."/>
 
-    <IconUrl DefaultValue="https://mailapp-dev.yoxel.com/client/icons/local-icon.jpg"/>
-    <HighResolutionIconUrl DefaultValue="https://mailapp-dev.yoxel.com/client/icons/local-icon.jpg"/>
+    <IconUrl DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_80.png"/>
+    <HighResolutionIconUrl DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_192.png"/>
 
     <SupportUrl DefaultValue="http://helpdocs.repfabric.info/inbox-app-for-office365"/>
 
@@ -37,34 +37,11 @@
                 <SourceLocation DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=20e68f5b5758ae0ec22f455f6d54c1c4"/>
                 <RequestedHeight>400</RequestedHeight>
             </DesktopSettings>
-            <TabletSettings>
-                <SourceLocation DefaultValue="https://localhost:63340/client/read.html"/>
-                <RequestedHeight>400</RequestedHeight>
-            </TabletSettings>
-            <PhoneSettings>
-                <SourceLocation DefaultValue="https://localhost:63340/client/read.html"/>
-            </PhoneSettings>
         </Form>
-<!--        <Form xsi:type="ItemEdit">-->
-<!--            <DesktopSettings>-->
-<!--                <SourceLocation DefaultValue="https://localhost:63340/client/compose.html"/>-->
-<!--            </DesktopSettings>-->
-<!--            <TabletSettings>-->
-<!--                <SourceLocation DefaultValue="https://localhost:63340/client/compose.html"/>-->
-<!--            </TabletSettings>-->
-<!--            <PhoneSettings>-->
-<!--                <SourceLocation DefaultValue="https://localhost:63340/client/compose.html"/>-->
-<!--            </PhoneSettings>-->
-<!--        </Form>-->
     </FormSettings>
 
     <Permissions>ReadWriteItem</Permissions>
-    <Rule xsi:type="RuleCollection" Mode="Or">
-<!--        <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit"/>-->
-        <!--<Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Edit" />-->
-        <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
-        <!--<Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Read" />-->
-    </Rule>
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
     <DisableEntityHighlighting>false</DisableEntityHighlighting>
 
     <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides"
@@ -78,89 +55,7 @@
 
         <Hosts>
             <Host xsi:type="MailHost">
-
                 <DesktopFormFactor>
-                    <!--<FunctionFile resid="functionFile"/>-->
-
-                    <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
-                        <OfficeTab id="TabDefault">
-                            <Group id="appComposeYoxelGroup">
-                                <Label resid="groupLabel"/>
-
-                                <!-- Task pane button -->
-                                <Control xsi:type="Button" id="appComposeOpenPaneButton">
-                                    <Label resid="paneComposeButtonLabel"/>
-                                    <!--<Tooltip resid="paneComposeButtonTooltip"/>-->
-                                    <Supertip>
-                                        <Title resid="paneComposeSuperTipTitle"/>
-                                        <Description resid="paneComposeSuperTipDescription"/>
-                                    </Supertip>
-                                    <Icon>
-                                        <bt:Image size="16" resid="icon_Cloud_16"/>
-                                        <bt:Image size="32" resid="icon_Cloud_32"/>
-                                        <bt:Image size="80" resid="icon_Cloud_80"/>
-                                    </Icon>
-                                    <Action xsi:type="ShowTaskpane">
-                                        <SourceLocation resid="composeTaskPaneUrl"/>
-                                    </Action>
-                                </Control>
-                            </Group>
-                        </OfficeTab>
-                    </ExtensionPoint>
-
-                    <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
-                        <OfficeTab id="TabDefault">
-                            <Group id="appReadYoxelGroup">
-                                <Label resid="groupLabel"/>
-
-                                <!-- Task pane button -->
-                                <Control xsi:type="Button" id="appAttendeeOpenPaneButton">
-                                    <Label resid="paneComposeButtonLabel"/>
-                                    <!--<Tooltip resid="paneComposeButtonTooltip"/>-->
-                                    <Supertip>
-                                        <Title resid="paneComposeSuperTipTitle"/>
-                                        <Description resid="paneComposeSuperTipDescription"/>
-                                    </Supertip>
-                                    <Icon>
-                                        <bt:Image size="16" resid="icon_Cloud_16"/>
-                                        <bt:Image size="32" resid="icon_Cloud_32"/>
-                                        <bt:Image size="80" resid="icon_Cloud_80"/>
-                                    </Icon>
-                                    <Action xsi:type="ShowTaskpane">
-                                        <SourceLocation resid="readTaskPaneUrl"/>
-                                    </Action>
-                                </Control>
-                            </Group>
-                        </OfficeTab>
-                    </ExtensionPoint>
-
-                    <!-- Message compose form -->
-                    <ExtensionPoint xsi:type="MessageComposeCommandSurface">
-                        <OfficeTab id="TabDefault">
-                            <Group id="msgComposeYoxelGroup">
-                                <Label resid="groupLabel"/>
-
-                                <!-- Task pane button -->
-                                <Control xsi:type="Button" id="msgComposeOpenPaneButton">
-                                    <Label resid="paneComposeButtonLabel"/>
-                                    <!--<Tooltip resid="paneComposeButtonTooltip"/>-->
-                                    <Supertip>
-                                        <Title resid="paneComposeSuperTipTitle"/>
-                                        <Description resid="paneComposeSuperTipDescription"/>
-                                    </Supertip>
-                                    <Icon>
-                                        <bt:Image size="16" resid="icon_Cloud_16"/>
-                                        <bt:Image size="32" resid="icon_Cloud_32"/>
-                                        <bt:Image size="80" resid="icon_Cloud_80"/>
-                                    </Icon>
-                                    <Action xsi:type="ShowTaskpane">
-                                        <SourceLocation resid="composeTaskPaneUrl"/>
-                                    </Action>
-                                </Control>
-                            </Group>
-                        </OfficeTab>
-                    </ExtensionPoint>
-
                     <!-- Message read form -->
                     <ExtensionPoint xsi:type="MessageReadCommandSurface">
                         <OfficeTab id="TabDefault">
@@ -193,33 +88,23 @@
 
         <Resources>
             <bt:Images>
-                <bt:Image id="icon_Cloud_16" DefaultValue="https://addin.yoxel.com/icons/icon_Cloud_16.png"/>
-                <bt:Image id="icon_Cloud_32" DefaultValue="https://addin.yoxel.com/icons/icon_Cloud_32.png"/>
-                <bt:Image id="icon_Cloud_80" DefaultValue="https://addin.yoxel.com/icons/icon_Cloud_80.png"/>
+                <bt:Image id="icon_Cloud_16" DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_16.png"/>
+                <bt:Image id="icon_Cloud_32" DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_32_1.png"/>
+                <bt:Image id="icon_Cloud_80" DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_80.png"/>
             </bt:Images>
             <bt:Urls>
-                <!--<bt:Url id="functionFile" DefaultValue="https://mailapp-dev.repfabric.info/client/Functions.html"/>-->
                 <bt:Url id="readTaskPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=20e68f5b5758ae0ec22f455f6d54c1c4"/>
-                <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:63340/compose.html"/>
-                <bt:Url id="customPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=20e68f5b5758ae0ec22f455f6d54c1c4"/>
             </bt:Urls>
             <bt:ShortStrings>
-                <bt:String id="groupLabel" DefaultValue="Aurinko local"/>
-
-                <!-- Compose mode -->
-                <bt:String id="paneComposeButtonLabel" DefaultValue="Open Aurinko local"/>
-                <bt:String id="paneComposeSuperTipTitle" DefaultValue="Open Aurinko local"/>
+                <bt:String id="groupLabel" DefaultValue="Aurinko"/>
 
                 <!-- Read mode -->
-                <bt:String id="paneReadButtonLabel" DefaultValue="Open Aurinko local"/>
-                <bt:String id="paneReadSuperTipTitle" DefaultValue="Open Aurinko local"/>
+                <bt:String id="paneReadButtonLabel" DefaultValue="Open Aurinko example"/>
+                <bt:String id="paneReadSuperTipTitle" DefaultValue="Open Aurinko example"/>
             </bt:ShortStrings>
             <bt:LongStrings>
-                <!-- Compose mode -->
-                <bt:String id="paneComposeSuperTipDescription" DefaultValue="Opens Aurinko local task pane"/>
-
                 <!-- Read mode -->
-                <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens Aurinko local task pane"/>
+                <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens Aurinko example"/>
             </bt:LongStrings>
         </Resources>
 
@@ -238,86 +123,6 @@
                     <DesktopFormFactor>
                         <!--<FunctionFile resid="functionFile"/>-->
                         <SupportsSharedFolders>true</SupportsSharedFolders>
-                        <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
-                            <OfficeTab id="TabDefault">
-                                <Group id="appComposeYoxelGroup">
-                                    <Label resid="groupLabel"/>
-
-                                    <!-- Task pane button -->
-                                    <Control xsi:type="Button" id="appComposeOpenPaneButton">
-                                        <Label resid="paneComposeButtonLabel"/>
-                                        <!--<Tooltip resid="paneComposeButtonTooltip"/>-->
-                                        <Supertip>
-                                            <Title resid="paneComposeSuperTipTitle"/>
-                                            <Description resid="paneComposeSuperTipDescription"/>
-                                        </Supertip>
-                                        <Icon>
-                                            <bt:Image size="16" resid="icon_Cloud_16"/>
-                                            <bt:Image size="32" resid="icon_Cloud_32"/>
-                                            <bt:Image size="80" resid="icon_Cloud_80"/>
-                                        </Icon>
-                                        <Action xsi:type="ShowTaskpane">
-                                            <SourceLocation resid="composeTaskPaneUrl"/>
-                                        </Action>
-                                    </Control>
-                                </Group>
-                            </OfficeTab>
-                        </ExtensionPoint>
-
-                        <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
-                            <OfficeTab id="TabDefault">
-                                <Group id="appReadYoxelGroup">
-                                    <Label resid="groupLabel"/>
-
-                                    <!-- Task pane button -->
-                                    <Control xsi:type="Button" id="appAttendeeOpenPaneButton">
-                                        <Label resid="paneComposeButtonLabel"/>
-                                        <!--<Tooltip resid="paneComposeButtonTooltip"/>-->
-                                        <Supertip>
-                                            <Title resid="paneComposeSuperTipTitle"/>
-                                            <Description resid="paneComposeSuperTipDescription"/>
-                                        </Supertip>
-                                        <Icon>
-                                            <bt:Image size="16" resid="icon_Cloud_16"/>
-                                            <bt:Image size="32" resid="icon_Cloud_32"/>
-                                            <bt:Image size="80" resid="icon_Cloud_80"/>
-                                        </Icon>
-                                        <Action xsi:type="ShowTaskpane">
-                                            <SourceLocation resid="readTaskPaneUrl"/>
-                                            <SupportsPinning>true</SupportsPinning>
-                                        </Action>
-                                    </Control>
-                                </Group>
-                            </OfficeTab>
-                        </ExtensionPoint>
-
-                        <!-- Message compose form -->
-                        <ExtensionPoint xsi:type="MessageComposeCommandSurface">
-                            <OfficeTab id="TabDefault">
-                                <Group id="msgComposeYoxelGroup">
-                                    <Label resid="groupLabel"/>
-
-                                    <!-- Task pane button -->
-                                    <Control xsi:type="Button" id="msgComposeOpenPaneButton">
-                                        <Label resid="paneComposeButtonLabel"/>
-                                        <!--<Tooltip resid="paneComposeButtonTooltip"/>-->
-                                        <Supertip>
-                                            <Title resid="paneComposeSuperTipTitle"/>
-                                            <Description resid="paneComposeSuperTipDescription"/>
-                                        </Supertip>
-                                        <Icon>
-                                            <bt:Image size="16" resid="icon_Cloud_16"/>
-                                            <bt:Image size="32" resid="icon_Cloud_32"/>
-                                            <bt:Image size="80" resid="icon_Cloud_80"/>
-                                        </Icon>
-                                        <Action xsi:type="ShowTaskpane">
-                                            <SourceLocation resid="composeTaskPaneUrl"/>
-                                        </Action>
-                                    </Control>
-                                </Group>
-                            </OfficeTab>
-                        </ExtensionPoint>
-
                         <!-- Message read form -->
                         <ExtensionPoint xsi:type="MessageReadCommandSurface">
                             <OfficeTab id="TabDefault">
@@ -346,74 +151,29 @@
                             </OfficeTab>
                         </ExtensionPoint>
                     </DesktopFormFactor>
-
-                    <!--<MobileFormFactor>-->
-                    <!--&lt;!&ndash; <FunctionFile resid="residUILessFunctionFileUrl" /> &ndash;&gt;-->
-                    <!--<ExtensionPoint xsi:type="MobileMessageReadCommandSurface">-->
-                    <!--<Group id="mobileMsgRead">-->
-                    <!--<Label resid="groupLabel" />-->
-                    <!--<Control xsi:type="MobileButton" id="msgReadOpenPaneButton">-->
-                    <!--<Label resid="paneReadButtonLabel"/>-->
-                    <!--<Icon>-->
-                    <!--<bt:Image size="25" resid="icon_Cloud_16" scale="1"/>-->
-                    <!--<bt:Image size="25" resid="icon_Cloud_16" scale="2"/>-->
-                    <!--<bt:Image size="25" resid="icon_Cloud_16" scale="3"/>-->
-                    <!--<bt:Image size="32" resid="icon_Cloud_32" scale="1"/>-->
-                    <!--<bt:Image size="32" resid="icon_Cloud_32" scale="2"/>-->
-                    <!--<bt:Image size="32" resid="icon_Cloud_32" scale="3"/>-->
-                    <!--<bt:Image size="48" resid="icon_Cloud_80" scale="1"/>-->
-                    <!--<bt:Image size="48" resid="icon_Cloud_80" scale="2"/>-->
-                    <!--<bt:Image size="48" resid="icon_Cloud_80" scale="3"/>-->
-                    <!--&lt;!&ndash;<bt:Image resid="blue-icon-16-1" size="25" scale="1"/>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<bt:Image resid="blue-icon-16-2" size="25" scale="2"/>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<bt:Image resid="blue-icon-16-3" size="25" scale="3"/>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<bt:Image resid="blue-icon-32-1" size="32" scale="1"/>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<bt:Image resid="blue-icon-32-2" size="32" scale="2"/>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<bt:Image resid="blue-icon-32-3" size="32" scale="3"/>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<bt:Image resid="blue-icon-80-1" size="48" scale="1"/>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<bt:Image resid="blue-icon-80-2" size="48" scale="2"/>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<bt:Image resid="blue-icon-80-3" size="48" scale="3"/>&ndash;&gt;-->
-                    <!--</Icon>-->
-                    <!--<Action xsi:type="ShowTaskpane">-->
-                    <!--<SourceLocation resid="readTaskPaneUrl"/>-->
-                    <!--</Action>-->
-                    <!--</Control>-->
-                    <!--</Group>-->
-                    <!--</ExtensionPoint>-->
-                    <!--&lt;!&ndash; possibly more ExtensionPoint elements &ndash;&gt;-->
-                    <!--</MobileFormFactor>-->
                 </Host>
             </Hosts>
 
             <Resources>
                 <bt:Images>
-                    <bt:Image id="icon_Cloud_16" DefaultValue="https://addin.yoxel.com/icons/icon_Cloud_16.png"/>
-                    <bt:Image id="icon_Cloud_32" DefaultValue="https://addin.yoxel.com/icons/icon_Cloud_32.png"/>
-                    <bt:Image id="icon_Cloud_80" DefaultValue="https://addin.yoxel.com/icons/icon_Cloud_80.png"/>
+                    <bt:Image id="icon_Cloud_16" DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_16.png"/>
+                    <bt:Image id="icon_Cloud_32" DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_32_1.png"/>
+                    <bt:Image id="icon_Cloud_80" DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_80.png"/>
                 </bt:Images>
                 <bt:Urls>
                     <!--<bt:Url id="functionFile" DefaultValue="https://mailapp.repfabric.info/client/Functions.html"/>-->
                     <bt:Url id="readTaskPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=20e68f5b5758ae0ec22f455f6d54c1c4"/>
-                    <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:63340/compose.html"/>
-                    <bt:Url id="customPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=20e68f5b5758ae0ec22f455f6d54c1c4"/>
                 </bt:Urls>
                 <bt:ShortStrings>
-                    <bt:String id="groupLabel" DefaultValue="Repfabric Sync+"/>
-
-                    <!-- Compose mode -->
-                    <bt:String id="paneComposeButtonLabel" DefaultValue="Open Repfabric Sync+"/>
-                    <bt:String id="paneComposeSuperTipTitle" DefaultValue="Open Repfabric Sync+"/>
+                    <bt:String id="groupLabel" DefaultValue="Aurinko"/>
 
                     <!-- Read mode -->
-                    <bt:String id="paneReadButtonLabel" DefaultValue="Repfabric Sync+"/>
-                    <bt:String id="paneReadSuperTipTitle" DefaultValue="Open Repfabric Sync+"/>
+                    <bt:String id="paneReadButtonLabel" DefaultValue="Open Aurinko example"/>
+                    <bt:String id="paneReadSuperTipTitle" DefaultValue="Open Aurinko example"/>
                 </bt:ShortStrings>
                 <bt:LongStrings>
-                    <!-- Compose mode -->
-                    <bt:String id="paneComposeSuperTipDescription" DefaultValue="Opens Repfabric Sync+ task pane"/>
-
                     <!-- Read mode -->
-                    <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens Repfabric Sync+ task pane"/>
+                    <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens Aurinko example"/>
                 </bt:LongStrings>
             </Resources>
 
