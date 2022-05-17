@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 let authUrl = function() {
     const url =  wlo +'/v1/auth/authorize?clientId=' + auClientId + '&serviceType=Office365&userAccount=primary&authServiceType=MsTeamsBot&returnUrl=' + encodeURIComponent(wlo + '/msteams/auth_callback.html')
-    console.log(url)
+    process.stdout.write(url)
     return url
 }
 
