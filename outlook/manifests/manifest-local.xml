@@ -37,7 +37,7 @@
     <FormSettings>
         <Form xsi:type="ItemRead">
             <DesktopSettings>
-                <SourceLocation DefaultValue="https://localhost:63342/aurinko-addons/outlook/read.html?clientId=55507716830219f1f872b15e15b8365b"/>
+                <SourceLocation DefaultValue="https://localhost:63342/aurinko-addons/outlook/read.html?clientId=4e570b248fd3e4e2583b3773e3b586d6"/>
                 <RequestedHeight>400</RequestedHeight>
             </DesktopSettings>
             <TabletSettings>
@@ -202,9 +202,9 @@
             </bt:Images>
             <bt:Urls>
                 <!--<bt:Url id="functionFile" DefaultValue="https://mailapp-dev.repfabric.info/client/Functions.html"/>-->
-                <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:63342/aurinko-addons/outlook/read.html?clientId=55507716830219f1f872b15e15b8365b"/>
+                <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:63342/aurinko-addons/outlook/read.html?clientId=4e570b248fd3e4e2583b3773e3b586d6"/>
                 <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:63340/compose.html"/>
-                <bt:Url id="customPaneUrl" DefaultValue="https://localhost:63342/aurinko-addons/outlook/read.html?clientId=55507716830219f1f872b15e15b8365b"/>
+                <bt:Url id="customPaneUrl" DefaultValue="https://localhost:63342/aurinko-addons/outlook/read.html?clientId=4e570b248fd3e4e2583b3773e3b586d6"/>
             </bt:Urls>
             <bt:ShortStrings>
                 <bt:String id="groupLabel" DefaultValue="Aurinko local"/>
@@ -396,9 +396,9 @@
                 </bt:Images>
                 <bt:Urls>
                     <!--<bt:Url id="functionFile" DefaultValue="https://mailapp.repfabric.info/client/Functions.html"/>-->
-                    <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:63342/aurinko-addons/outlook/read.html?clientId=55507716830219f1f872b15e15b8365b"/>
+                    <bt:Url id="readTaskPaneUrl" DefaultValue="https://localhost:63342/aurinko-addons/outlook/read.html?clientId=4e570b248fd3e4e2583b3773e3b586d6"/>
                     <bt:Url id="composeTaskPaneUrl" DefaultValue="https://localhost:63340/compose.html"/>
-                    <bt:Url id="customPaneUrl" DefaultValue="https://localhost:63342/aurinko-addons/outlook/read.html?clientId=55507716830219f1f872b15e15b8365b"/>
+                    <bt:Url id="customPaneUrl" DefaultValue="https://localhost:63342/aurinko-addons/outlook/read.html?clientId=4e570b248fd3e4e2583b3773e3b586d6"/>
                 </bt:Urls>
                 <bt:ShortStrings>
                     <bt:String id="groupLabel" DefaultValue="Repfabric Sync+"/>

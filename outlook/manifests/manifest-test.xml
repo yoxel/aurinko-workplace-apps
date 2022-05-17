@@ -34,7 +34,7 @@
     <FormSettings>
         <Form xsi:type="ItemRead">
             <DesktopSettings>
-                <SourceLocation DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=20e68f5b5758ae0ec22f455f6d54c1c4"/>
+                <SourceLocation DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=4e570b248fd3e4e2583b3773e3b586d6"/>
                 <RequestedHeight>400</RequestedHeight>
             </DesktopSettings>
         </Form>
@@ -93,7 +93,7 @@
                 <bt:Image id="icon_Cloud_80" DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_80.png"/>
             </bt:Images>
             <bt:Urls>
-                <bt:Url id="readTaskPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=20e68f5b5758ae0ec22f455f6d54c1c4"/>
+                <bt:Url id="readTaskPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=4e570b248fd3e4e2583b3773e3b586d6"/>
             </bt:Urls>
             <bt:ShortStrings>
                 <bt:String id="groupLabel" DefaultValue="Aurinko"/>
@@ -162,7 +162,7 @@
                 </bt:Images>
                 <bt:Urls>
                     <!--<bt:Url id="functionFile" DefaultValue="https://mailapp.repfabric.info/client/Functions.html"/>-->
-                    <bt:Url id="readTaskPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=20e68f5b5758ae0ec22f455f6d54c1c4"/>
+                    <bt:Url id="readTaskPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId=4e570b248fd3e4e2583b3773e3b586d6"/>
                 </bt:Urls>
                 <bt:ShortStrings>
                     <bt:String id="groupLabel" DefaultValue="Aurinko"/>
