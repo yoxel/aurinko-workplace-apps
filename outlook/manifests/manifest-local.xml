@@ -7,7 +7,7 @@
 
     <Id>9b415fdc-d13b-11ec-9d64-0242ac120002</Id>
     <Version>1.0</Version>
-    <ProviderName>Yoxel</ProviderName>
+    <ProviderName>Yoxel, Inc.</ProviderName>
     <DefaultLocale>en-US</DefaultLocale>
     <DisplayName DefaultValue="Aurinko sample addon (local)"/>
     <Description DefaultValue="Inbox app for Salesforce."/>
