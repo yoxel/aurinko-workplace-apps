@@ -21,3 +21,9 @@ button {
     -ms-user-select: none;
     user-select: none;
 }
+
+button:hover {
+    background-color: #005fb2;
+    border-color: #005fb2;
+    color: #fff;
+}
