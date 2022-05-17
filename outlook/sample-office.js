@@ -1,5 +1,5 @@
 const clientIdName = 'clientId';
-const baseUrl = 'https://api.aurinko.io';
+const baseUrl = 'https://asti.aurinko.io';
 let params = new URLSearchParams(window.location.search);
 let clientId = params.get(clientIdName);
 let onAuthClick;
