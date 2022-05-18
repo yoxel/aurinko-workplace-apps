@@ -27,3 +27,24 @@ button:hover {
     border-color: #005fb2;
     color: #fff;
 }
+
+* {
+    font-family:"Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, "system-ui", Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+h4 {
+    font-weight:600
+
+}
+
+label {
+    color:gray;
+    font-size:.75rem;
+
+}
+
+p {
+    margin: .25rem 0;
+    font-size: .9rem;
+}
