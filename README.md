@@ -1,10 +1,10 @@
 # Workplace app examples
 
-Aurinko provides a backend API for single-page apps with a focus on workplace integrations and unified APIs. Aurinko is built to support workplace apps/addins/addons like Office 365 addins, MS Teams apps, Zoom/WebEx in-meeting apps, ... It will allow your app to authenticate a user using Office 365, Gmail, Salesforce,... oauth flow and will manage a user session based on that id. 
+Aurinko provides a backend API for single-page apps with a focus on workplace integrations and unified APIs. Aurinko is built to support workplace apps/addins/addons like Office 365 addins, MS Teams apps, Zoom/WebEx in-meeting apps. It will allow your webapp to authenticate a user using Office 365, Gmail, Salesforce,... oauth flow and will manage a user session based on that id. 
 
 The benefits of using Aurinko as the backend are the following:
 
-1. Pre-built backend API, openid based user management is provided.
+1. Pre-built backend API, openid based user management is provided, supports Outlook's idToken.
 2. Unified OAuth flows, and access token management. Oauth tokens never reside on the client-side.
 3. Unified error handling. 
 
@@ -19,9 +19,15 @@ ISVs will appreciate the fact that they can build apps for one API to work with 
 
 ## Outlook addin
 
-Here is how to setup Aurinko.io as a backend API for your Outlook addin:
-[Create your first Outlook addin](https://docs.aurinko.io/article/36-create-your-first-outlook-addin)
+Here is how to setup Aurinko.io as a backend API for your Outlook addin: [Create your first Outlook addin](https://docs.aurinko.io/article/36-create-your-first-outlook-addin)!
 
 The addin manifest file that Aurinko generates for you is just a quickstart sample that you can install in Outlook right away.
-The manifest activates the addin's READ mode using outlook/read.html page.
+The manifest activates the addin's READ mode using outlook/read.html code. 
 
+Check out this article [Outlook addins](https://docs.aurinko.io/article/30-outlook-addins) to learn more.
+
+## MS Teams app
+
+Here is how to setup Aurinko.io as a backend API for your Teams app (tab): [Create your first Teams app](https://docs.aurinko.io/article/36-create-your-first-outlook-addin)!
+
+Check out this article [MS Teams apps](https://docs.aurinko.io/article/31-microsoft-teams-apps) to learn more.
