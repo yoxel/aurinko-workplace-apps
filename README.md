@@ -1,6 +1,21 @@
-# Aurinko workplace app examples
+# Workplace app examples
 
-# Getting started
+Aurinko provides a backend API for single-page apps with a focus on workplace integrations and unified APIs. Aurinko is built to support workplace apps/addins/addons like Office 365 addins, MS Teams apps, Zoom/WebEx in-meeting apps, ... It will allow your app to authenticate a user using Office 365, Gmail, Salesforce,... oauth flow and will manage a user session based on that id. 
+
+The benefits of using Aurinko as the backend are the following:
+
+1. Pre-built backend API, openid based user management is provided.
+2. Unified OAuth flows, and access token management. Oauth tokens never reside on the client-side.
+3. Unified error handling. 
+
+## Virtualized/unified API
+
+ISVs will appreciate the fact that they can build apps for one API to work with many data providers:
+
+1. [Unified mailbox API](https://docs.aurinko.io/article/8-what-is-aurinko) to access email/calendar/contacts data across multiple providers (Office 365, Gmail, MS Exchange, IMAP).
+
+2. Virtualized/unified CRM API to define unified data models specifically for your app needs. Currently supporting Salesforce, Sugar CRM, HubSpot, ...
+
 
 ## Outlook addin
 
