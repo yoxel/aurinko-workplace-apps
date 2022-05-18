@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.10",
+  "version": "1.0.0",
+  "id": "{{INSERT_YOUR_UUID}}",
+  "packageName": "com.yoxel.teams",
+  "localizationInfo": {
+    "defaultLanguageTag": "en-us"
+  },
+  "developer": {
+    "name": "Aurinko",
+    "websiteUrl": "https://www.aurinko.io/",
+    "privacyUrl": "https://www.aurinko.io/privacy",
+    "termsOfUseUrl": "https://www.aurinko.io/app-tos",
+    "mpnId": "1234567890"
+  },
+  "name": {
+    "short": "My Aurinko app",
+    "full": "My Aurinko app (example)"
+  },
+  "description": {
+    "short": "An example Teams app using Aurinko.io as backend.",
+    "full": "This is an example Teams app for developers using Aurinko.io as the backend API. The app features one Teams tab, bot is not activated."
+  },
+  "icons": {
+    "outline": "aurinko-32.png",
+    "color": "aurinko.png"
+  },
+  "accentColor": "#ffffff",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://example.aurinko.io/msteams/configuration.html?clientId={{YOUR_AURINKO_CLIENT_ID}}",
+      "scopes": ["team"]
+    }
+  ]
+
+}

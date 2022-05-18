@@ -27,10 +27,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
     loginInfo = document.getElementById('login-info')
     usernameView = document.getElementById('username')
     userEmailView = document.getElementById('email')
-
    
 })
-
 
 let authUrl = function() {
     const url =  wlo +'/v1/auth/authorize?clientId=' + auClientId + '&serviceType=Office365&authServiceType=MsTeamsBot&userAccount=primary&returnUrl=' + encodeURIComponent(wlo + '/msteams/auth_callback.html')
@@ -58,8 +56,10 @@ function startAuthorization () {
         },
         
         failureCallback: function (reason) {
-            console.log('Auth failure')
-            showError(reason)
+            console.log('Auth failure: ', reason)
+            if (x != "CancelledByUser") {
+                showError(reason)
+            }
         }
     })
 }
