@@ -4,7 +4,7 @@ Aurinko provides a backend API for single-page apps with a focus on workplace in
 
 The benefits of using Aurinko as the backend are the following:
 
-1. Pre-built backend API, openid based user management is provided, supports Outlook's idToken.
+1. Pre-built backend API, openid-based user management is provided, supports Outlook's idToken.
 2. Unified OAuth flows, and access token management. Oauth tokens never reside on the client-side.
 3. Unified error handling. 
 
@@ -19,9 +19,9 @@ ISVs will appreciate the fact that they can build apps for one API to work with 
 
 ## Outlook addin
 
-Here is how to setup Aurinko.io as a backend API for your Outlook addin: [Create your first Outlook addin](https://docs.aurinko.io/article/36-create-your-first-outlook-addin)!
+Here is how to set up Aurinko.io as a backend API for your Outlook addin: [Create your first Outlook addin](https://docs.aurinko.io/article/36-create-your-first-outlook-addin)!
 
-The addin manifest file that Aurinko generates for you is just a quickstart sample that you can install in Outlook right away.
+The addin manifest file that Aurinko generates for you is just a quickstart example that you can [install in Outlook](https://docs.aurinko.io/article/37-office-365-installing-outlook-addin) right away.
 The manifest activates the addin's READ mode using outlook/read.html code. 
 
 Check out this article [Outlook addins](https://docs.aurinko.io/article/30-outlook-addins) to learn more.
@@ -29,5 +29,8 @@ Check out this article [Outlook addins](https://docs.aurinko.io/article/30-outlo
 ## MS Teams app
 
 Here is how to setup Aurinko.io as a backend API for your Teams app (tab): [Create your first Teams app](https://docs.aurinko.io/article/36-create-your-first-outlook-addin)!
+
+The app package that Aurinko generates for you is just a quickstart example that you can install in [MS Teams](https://docs.aurinko.io/article/38-installing-ms-teams-app) right away.
+The package activates one Teams tab, a bot is not activated.
 
 Check out this article [MS Teams apps](https://docs.aurinko.io/article/31-microsoft-teams-apps) to learn more.
