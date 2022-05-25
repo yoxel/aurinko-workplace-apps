@@ -5,12 +5,13 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xsi:type="MailApp">
 
-  <Id>{{UUID}}</Id>
+  <Id>{{INSERT_YOUR_UUID}}</Id>
   <Version>1.0</Version>
   <ProviderName>Aurinko</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Aurinko"/>
-  <Description DefaultValue="Aurinko addin (example)"/>
+
+  <DisplayName DefaultValue="My Aurinko addin"/>
+  <Description DefaultValue="This is an example Outlook addin for developers using Aurinko.io as the backend API."/>
 
   <IconUrl DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_80.png"/>
   <HighResolutionIconUrl DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_192.png"/>
@@ -34,7 +35,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://example.aurinko.io/outlook/read.html?clientId={{AURINKO_APP_CLIENT_ID}}"/>
+        <SourceLocation DefaultValue="https://example.aurinko.io/outlook/read.html?clientId={{YOUR_AURINKO_CLIENT_ID}}"/>
         <RequestedHeight>400</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -92,7 +93,7 @@
         <bt:Image id="icon_Cloud_80" DefaultValue="https://example.aurinko.io/outlook/icons/aurinko_80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="readTaskPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId={{AURINKO_APP_CLIENT_ID}}"/>
+        <bt:Url id="readTaskPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId={{YOUR_AURINKO_CLIENT_ID}}"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Aurinko"/>
@@ -160,7 +161,7 @@
         </bt:Images>
         <bt:Urls>
           <!--<bt:Url id="functionFile" DefaultValue="https://example.aurinko.io/outlook/client/Functions.html"/>-->
-          <bt:Url id="readTaskPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId={{AURINKO_APP_CLIENT_ID}}"/>
+          <bt:Url id="readTaskPaneUrl" DefaultValue="https://example.aurinko.io/outlook/read.html?clientId={{YOUR_AURINKO_CLIENT_ID}}"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="groupLabel" DefaultValue="Aurinko"/>
