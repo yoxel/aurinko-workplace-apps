@@ -8,6 +8,11 @@
     src: url(https://fonts.gstatic.com/s/materialicons/v88/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
 }
 
+h1, h2, ph3, h4, h5, h6, p {
+    margin: 0;
+
+}
+
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
