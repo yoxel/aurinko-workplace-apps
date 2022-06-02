@@ -8,7 +8,6 @@ window.onerror = function(e) {
 let wlo = window.location.origin
 
 let auClientId = getQueryParam('clientId')
-// var apiUrl = 'https://api.aurinko.io/v1'
 var apiUrl = wlo + '/v1'
 
 let beforeAuthView, afterAuthView, errorView, loginInfo, usernameView, userEmailView
