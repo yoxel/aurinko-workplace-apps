@@ -1,0 +1,51 @@
+button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: border .15s linear;
+    transition: border .15s linear;
+    background-color: #0070d2;
+    color: #fff;
+    background-clip: border-box;
+    border: 1px solid #0070d2;
+    border-radius: .25rem;
+    line-height: 1.875rem;
+    -webkit-appearance: none;
+    white-space: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: .85rem;
+}
+
+button:hover {
+    background-color: #005fb2;
+    border-color: #005fb2;
+    color: #fff;
+}
+
+* {
+    font-family:"Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, "system-ui", Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+h4 {
+    font-weight:600
+
+}
+
+label {
+    color:gray;
+    font-size:.75rem;
+
+}
+
+p {
+    margin: .25rem 0;
+    font-size: .9rem;
+}
