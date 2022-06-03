@@ -50,13 +50,15 @@ app.onReady().then(function () {
                     'prompt': 'select_account',
                     'loginHint': email,
                     'nativeScopes': 'spark:all meeting:schedules_read meeting:participants_read',
-                    'returnUrl': window.location.href,
                 };
+
+                if (!isPopup) {
+                    params['returnUrl'] = window.location.href;
+                }
 
                 for (let paramsKey in params) {
                     authUrl.searchParams.append(paramsKey, params[paramsKey]);
                 }
-
 
                 if (isPopup) {
                     let child = window.open(
