@@ -1,7 +1,7 @@
 const clientIdName = 'clientId';
-const baseUrl = 'https://asti.aurinko.io';
+let baseUrl = window.location.origin + '/v1';
 let params = new URLSearchParams(window.location.search);
-let clientId = 'e25e22446c87b0427f0ef23028506caa';
+let clientId = params.get(clientIdName);
 let onAuthClick;
 let onLogoutClick;
 let getUser;
@@ -22,7 +22,7 @@ app.onReady().then(function () {
                 'content-type': 'application/json'
             };
 
-            request('GET', baseUrl + '/v1/user', authHeaders, function (res) {
+            request('GET', baseUrl + '/user', authHeaders, function (res) {
                 log(res);
                 let parsed = JSON.parse(res.response);
                 let email = parsed['email'];
@@ -31,7 +31,7 @@ app.onReady().then(function () {
             });
 
             getUser = function () {
-                request('GET', baseUrl + '/v1/user', authHeaders, function (res) {
+                request('GET', baseUrl + '/user', authHeaders, function (res) {
                     log(res);
                     let parsed = JSON.parse(res.response);
                     let email = parsed['email'];
@@ -41,7 +41,7 @@ app.onReady().then(function () {
             };
 
             onAuthClick = function (isPopup) {
-                let authUrl = new URL(baseUrl + '/v1/auth/authorize');
+                let authUrl = new URL(baseUrl + '/auth/authorize');
 
                 let params = {
                     'clientId': clientId,
@@ -68,7 +68,7 @@ app.onReady().then(function () {
 
                     window.onmessage = function (event) {
                         log(event.data);
-                        request('GET', baseUrl + '/v1/user', authHeaders, function (res) {
+                        request('GET', baseUrl + '/user', authHeaders, function (res) {
                             log(res);
                             let parsed = JSON.parse(res.response);
                             let email = parsed['email'];
@@ -119,10 +119,6 @@ function request(method, url, headers, ready) {
     };
 
     xhttp.withCredentials = true;
-
-    // xhttp.onerror = function () {
-    //     log(this.responseText);
-    // };
 
     xhttp.open(method, url, true);
 
