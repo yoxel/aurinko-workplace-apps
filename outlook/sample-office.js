@@ -3,6 +3,7 @@ const baseUrl = 'https://asti.aurinko.io';
 let params = new URLSearchParams(window.location.search);
 let clientId = params.get(clientIdName);
 let onAuthClick;
+let onLogoutClick;
 
 Office.initialize = function (reason) {
     console.log('Office.initialize started (' + reason + ')');
@@ -54,8 +55,10 @@ Office.initialize = function (reason) {
                         console.log(event);
                         request('GET', baseUrl + '/v1/user', authHeaders, function (res) {
                             console.log(res);
-                            let email = JSON.parse(res.response)['email'];
-                            showUserEmail(email);
+                            let parsed = JSON.parse(res.response);
+                            let email = parsed['email'];
+                            let name = parsed['accounts'][0]['name'];
+                            showUserInfo(email, name);
                             hideAuth();
                         });
                     };
@@ -76,7 +79,7 @@ Office.initialize = function (reason) {
 
 
 function request(method, url, headers, ready) {
-    var xhttp = new XMLHttpRequest();
+    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             ready(this);
@@ -92,14 +95,21 @@ function request(method, url, headers, ready) {
     xhttp.send();
 }
 
-function showUserEmail(email) {
-    var div = document.createElement('div');
-    div.innerHTML = '<p>Welcome. You have successfully logged in.</p>'
-    document.body.appendChild(div)
+function showUserInfo(email, name) {
+    let div = document.createElement('div');
+
+    div.innerHTML = '<h4>Welcome!</h4>' +
+        '<h4>You have successfully logged in.</h4>' +
+        '<label>User info</label>' +
+        '<p class="">' + name + '</p>' +
+        '<p>' + email + '</p>';
+
+    document.body.appendChild(div);
 }
 
 function hideAuth() {
-    let auth = document.getElementById('auth');
+    let auth = document.getElementById('first');
+
     if (auth !== undefined) {
         auth.hidden = true;
     }
