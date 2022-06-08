@@ -56,7 +56,7 @@ function startAuthorization () {
         
         failureCallback: function (reason) {
             console.log('Auth failure: ', reason)
-            if (x != "CancelledByUser") {
+            if (reason != "CancelledByUser") {
                 showError(reason)
             }
         }

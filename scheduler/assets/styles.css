@@ -98,7 +98,7 @@ mwc-circular-progress {
 
 
 .disabled{
-    color: var(--mdc-theme-text-disabled-on-background);
+    color: var(--grey);
     cursor: not-allowed !important;
 }
 
