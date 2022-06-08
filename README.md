@@ -30,7 +30,6 @@ Check out this article [Outlook addins](https://docs.aurinko.io/article/30-outlo
 
 Here is how to setup Aurinko.io as a backend API for your Teams app (tab): [Create your first Teams app](https://docs.aurinko.io/article/36-create-your-first-outlook-addin)!
 
-The app package that Aurinko generates for you is just a quickstart example that you can install in [MS Teams](https://docs.aurinko.io/article/38-installing-ms-teams-app) right away.
-The package activates one Teams tab, a bot is not activated.
+The app package that Aurinko generates for you is just a quickstart example that you can install in [MS Teams](https://docs.aurinko.io/article/38-installing-ms-teams-app) right away. The package activates one Teams tab (bot is not activated).
 
 Check out this article [MS Teams apps](https://docs.aurinko.io/article/31-microsoft-teams-apps) to learn more.
