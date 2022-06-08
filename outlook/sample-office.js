@@ -1,5 +1,5 @@
 const clientIdName = 'clientId';
-const baseUrl = 'https://asti.aurinko.io';
+let baseUrl = window.location.origin + '/v1';
 let params = new URLSearchParams(window.location.search);
 let clientId = params.get(clientIdName);
 let onAuthClick;
@@ -26,11 +26,11 @@ Office.initialize = function (reason) {
 
             onAuthClick = function () {
 
-                request('POST', baseUrl + '/v1/auth/prepare', authHeaders, function (resp) {
+                request('POST', baseUrl + '/auth/prepare', authHeaders, function (resp) {
 
                     let token = JSON.parse(resp.response)['token'];
 
-                    let authUrl = new URL(baseUrl + '/v1/auth/authorize');
+                    let authUrl = new URL(baseUrl + '/auth/authorize');
 
                     let params = {
                         'token': token,
@@ -53,7 +53,7 @@ Office.initialize = function (reason) {
 
                     window.onmessage = function (event) {
                         console.log(event);
-                        request('GET', baseUrl + '/v1/user', authHeaders, function (res) {
+                        request('GET', baseUrl + '/user', authHeaders, function (res) {
                             console.log(res);
                             let parsed = JSON.parse(res.response);
                             let email = parsed['email'];
