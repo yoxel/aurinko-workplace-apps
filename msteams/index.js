@@ -99,6 +99,10 @@ function apiRequest(method, path, headers, onSuccess) {
             hideError()
             onSuccess(xhr.response)
 
+        } else if (xhr.status = 401){
+            beforeAuthView.style.display = 'block'
+            afterAuthView.style.display = 'none'
+            hideError()
         } else {
             throw 'ApiException: ' + xhr.status + ' ' + xhr.response.message 
         }
