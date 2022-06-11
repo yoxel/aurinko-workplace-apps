@@ -32,3 +32,11 @@ Here is how to set up Aurinko.io as a backend API for your Teams app (tab): [Cre
 The app package that Aurinko generates for you is just a quickstart example that you can install in [MS Teams](https://docs.aurinko.io/article/38-installing-ms-teams-app) right away. The package activates one Teams tab (bot is not activated).
 
 Check out this article [MS Teams apps](https://docs.aurinko.io/article/31-microsoft-teams-apps) to learn more.
+
+## Scheduler
+
+Here is how to set up an appointment booking page: [Create your first appointment booking page](https://docs.aurinko.io/article/39-create-your-first-appointment-booking-page)
+
+The html page that Aurinko generates for you is just a quickstart example. To continue building your appointment booking app set up your own OAuth details: [Google OAuth setup](https://docs.aurinko.io/article/15-google-oauth-setup) and/or [Office 465 OAuth setup](https://docs.aurinko.io/article/16-office-365-oauth-setup).
+
+Then review our [Booking API refs](https://apirefs.aurinko.io/#operation/create) on how to create booking profiles.
