@@ -49,7 +49,7 @@ app.onReady().then(function () {
                     'userAccount': 'primary',
                     'prompt': 'select_account',
                     'loginHint': email,
-                    'nativeScopes': 'spark:all meeting:schedules_read meeting:participants_read',
+                    'nativeScopes': 'meeting:schedules_read meeting:participants_read',
                 };
 
                 if (!isPopup) {
