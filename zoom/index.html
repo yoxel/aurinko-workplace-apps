@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Webex app</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div id="first">
+    <h4 id="welcome">Welcome to your Aurinko addin!</h4>
+
+    <button id="auth" onclick="onAuthClick(true)">Authorize</button>
+    <button id="getUser" onclick="getUser(true)">Get user info</button>
+</div>
+<div id="authResult"></div>
+<div>
+    <label>Embedded info</label>
+    <p><span>User name: </span><span id="eiUserName"></span></p>
+    <p><span>Meeting name: </span><span id="eiMeetingName"></span></p>
+</div>
+<label>logs</label>
+<div id="log"></div>
+<!--<script src="index.js" type="text/javascript" defer></script>-->
+</body>
+</html>
