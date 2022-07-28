@@ -1,0 +1,3 @@
+/*
+  Access-Control-Allow-Origin: *
+  Content-Security-Policy: default-src 'self'; font-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://aurinko.yoxel.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.microsoft.com https://ajax.aspnetcdn.com https://aurinko.yoxel.com;
