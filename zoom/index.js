@@ -13,7 +13,7 @@ let authHeaders = {
 };
 
 request('GET', baseUrl + '/user', authHeaders, function (res) {
-    log(res);
+    console.log(res);
     let parsed = JSON.parse(res.response);
     let email = parsed['email'];
     let name = parsed['accounts'][0]['name'];
@@ -22,7 +22,7 @@ request('GET', baseUrl + '/user', authHeaders, function (res) {
 
 getUser = function () {
     request('GET', baseUrl + '/user', authHeaders, function (res) {
-        log(res);
+        console.log(res);
         let parsed = JSON.parse(res.response);
         let email = parsed['email'];
         let name = parsed['accounts'][0]['name'];
@@ -39,7 +39,6 @@ onAuthClick = function (isPopup) {
         'userAccount': 'primary',
         'prompt': 'select_account',
         'loginHint': email,
-        'nativeScopes': 'meeting:schedules_read meeting:participants_read',
     };
 
     if (!isPopup) {
@@ -57,9 +56,9 @@ onAuthClick = function (isPopup) {
             "width=800,height=600,resizable=1,scrollbars=1");
 
         window.onmessage = function (event) {
-            log(event.data);
+            console.log(event.data);
             request('GET', baseUrl + '/user', authHeaders, function (res) {
-                log(res);
+                console.log(res);
                 let parsed = JSON.parse(res.response);
                 let email = parsed['email'];
                 let name = parsed['accounts'][0]['name'];
@@ -85,7 +84,7 @@ function request(method, url, headers, ready) {
         if (this.readyState === 4 && this.status === 200) {
             ready(this);
         } else {
-            log(this.responseText);
+            console.log(this.responseText);
         }
     };
 
@@ -100,9 +99,3 @@ function request(method, url, headers, ready) {
     xhttp.send();
 }
 
-function log(...args) {
-    if (args === undefined) return;
-    let logP = document.createElement('p');
-    logP.innerText = args.join(' ');
-    document.getElementById('log').appendChild(logP);
-}
