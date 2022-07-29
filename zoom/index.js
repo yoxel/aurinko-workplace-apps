@@ -38,7 +38,7 @@ onAuthClick = function (isPopup) {
         'serviceType': 'Zoom',
         'userAccount': 'primary',
         'prompt': 'select_account',
-        'loginHint': email,
+        // 'loginHint': email,
     };
 
     if (!isPopup) {
