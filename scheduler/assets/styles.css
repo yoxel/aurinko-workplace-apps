@@ -8,15 +8,6 @@
     src: url(https://fonts.gstatic.com/s/materialicons/v88/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
 }
 
-h1, h2, ph3, h4, h5, h6, p {
-    margin: 0;
-
-}
-
-div {
-    box-sizing: border-box;
-}
-
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -38,6 +29,7 @@ div {
     /*--day-width: 4rem;*/
 
 
+   // --mdc-theme-primary: #63340a;
     --mdc-theme-on-primary: white;
     --mdc-typography-font-family: 'Nunito', 'Noto', sans-serif;
 
@@ -102,9 +94,9 @@ mwc-circular-progress {
     cursor: not-allowed !important;
 }
 
-/*.pickers_container {*/
-/*    max-width: calc(var(--day-width) * 7);*/
-/*}*/
+.text-grey {
+    color: rgba(0, 0, 0, 0.54);
+}
 
 .primary-text {
     color: var(--mdc-theme-primary);
@@ -207,7 +199,7 @@ mwc-dialog {
     user-select: none;
 }
 
- mwc-textfield {
+ mwc-textfield, mwc-textarea {
     --mdc-theme-primary: var(--mdc-theme-secondary);
     --mdc-text-field-outlined-idle-border-color: var(--mdc-theme-secondary);
     --mdc-text-field-outlined-hover-border-color: var(--mdc-theme-secondary);
