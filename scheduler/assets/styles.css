@@ -8,15 +8,6 @@
     src: url(https://fonts.gstatic.com/s/materialicons/v88/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
 }
 
-h1, h2, ph3, h4, h5, h6, p {
-    margin: 0;
-
-}
-
-div {
-    box-sizing: border-box;
-}
-
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -44,6 +35,7 @@ div {
     /* aurinko colors */
 
     --grey: #e0e0e0;
+    --light-grey: #ECECEC;
     --white: #FFF;
     --au-orange: #F7931E;
     --red: #EF4223;
@@ -58,18 +50,21 @@ div {
 
 html {
     background-color: #fff !important;
+    height: 100%;
 
-    font-family: var(--mdc-typography-font-family);
+    font-family: var(--mdc-typography-font-family) !important;
 
+    color: var(--mdc-theme-primary);
+
+    --mdc-theme-primary: var(--default-primary);
+    --mdc-theme-secondary: var(--default-secondary);
 
 }
 
 body {
     font-size: 0.9rem;
-    color: var(--mdc-theme-primary);
+    height: 100%;
 
-    --mdc-theme-primary: var(--default-primary);
-    --mdc-theme-secondary: var(--default-secondary);
 }
 
 .spinner-container{
@@ -99,12 +94,12 @@ mwc-circular-progress {
 
 .disabled{
     color: var(--grey);
-    cursor: not-allowed !important;
+    cursor: default !important;
 }
 
-/*.pickers_container {*/
-/*    max-width: calc(var(--day-width) * 7);*/
-/*}*/
+.text-grey {
+    color: rgba(0, 0, 0, 0.54);
+}
 
 .primary-text {
     color: var(--mdc-theme-primary);
@@ -120,17 +115,12 @@ mwc-circular-progress {
     /*overflow: hidden;*/
 }
 
-mwc-button.secondary {
-    --mdc-theme-primary: var(--mdc-theme-secondary);
+.full-height {
+    height: 100%;
 }
 
-mwc-dialog {
-    --mdc-dialog-heading-ink-color: var(--mdc-theme-primary);
-    --mdc-dialog-content-ink-color: var(--mdc-theme-primary);
-    --mdc-dialog-min-width: 25rem;
-    --mdc-typography-headline6-font-size: 1rem;
-    --mdc-typography-body1-line-height: 0.9rem;
-    --mdc-typography-body1-font-size: 0.9rem;
+.border-box-sizing {
+    box-sizing: border-box;
 }
 
 .messages-container {
@@ -142,11 +132,15 @@ mwc-dialog {
 .message-snackbar {
     max-width: 35rem;
     width: 100%;
-    box-shadow: rgba(0 0 0 0.2) 0 3px 5px -1px, rgba(0 0 0 .14) 0 6px 10px 0, rgba(0 0 0 .12) 0 1px 18px 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
     background-color: var(--mdc-theme-secondary);
     color: var(--white);
     --mdc-theme-primary: var(--white);
     z-index: 100;
+}
+
+.non-clickable {
+    cursor: default !important;
 }
 
 .days-container {
@@ -163,43 +157,21 @@ mwc-dialog {
 
 .right-scroll {
     position: absolute;
-    right: 0rem;
+    right: -2.5rem;
     top: 50%;
-    transform: translate(100%, -50%);
 }
 
 .left-scroll {
     position: absolute;
-    left: 0rem;
+    left: -2.5rem;
     top: 50%;
-    transform: translate(-100%, -50%);
-}
-
-.picker-button.selected {
-    background-color: var(--mdc-theme-secondary);
-    color: var(--white);
-    border-color: transparent;
-}
-
-.picker-button:not(.selected):not(.disabled):hover {
-    background: whitesmoke;
-    /*opacity: 0.01;*/
-}
-
-.picker-button.selected:hover {
-    filter: brightness(95%);
 }
 
 
 .time-container {
-    max-height: 11rem;
     position: relative;
 }
 
-
-.time.selected {
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
 
 .picker-button {
     cursor: pointer;
@@ -207,9 +179,243 @@ mwc-dialog {
     user-select: none;
 }
 
- mwc-textfield, mwc-textarea {
-    --mdc-theme-primary: var(--mdc-theme-secondary);
-    --mdc-text-field-outlined-idle-border-color: var(--mdc-theme-secondary);
-    --mdc-text-field-outlined-hover-border-color: var(--mdc-theme-secondary);
-    --mdc-text-field-label-ink-color: var(--mdc-theme-secondary);
- }
+.month-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0 10px;
+    justify-content: space-between;
+    max-width: 37rem;
+    min-width: 23rem;
+}
+
+.growing-block {
+    flex-grow: 1;
+}
+
+.month-day {
+
+    text-align: center;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+    margin-bottom: .5rem;
+    padding: .5rem 0;
+}
+
+.month-day.disabled {
+    cursor: default;
+    opacity: .9;
+}
+
+
+
+.month-day.raised.selected {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+.month-day.selected {
+    background-color: var(--mdc-theme-secondary);
+    color: var(--white);
+    border-color: transparent;
+}
+
+.month-day:not(.selected):not(.disabled):hover {
+    background: whitesmoke;
+    /*opacity: 0.01;*/
+}
+
+.month-day.selected:hover {
+    filter: brightness(95%);
+}
+
+.month-day.no-margin {
+    margin: 0;
+}
+
+
+.content-height {
+    height: fit-content;
+}
+
+.content-width{
+    width: fit-content;
+}
+
+.border-bottom-secondary {
+    border-bottom: 1px solid var(--mdc-theme-secondary);
+}
+
+
+.gap--small {
+    gap: 7px;
+}
+
+.gap--large {
+    gap: 2rem;
+}
+
+.gap--xx-large {
+    gap: 5rem;
+}
+
+.picker-header-fixed-height {
+    height: 7rem;
+}
+
+
+ui5-carousel {
+    width: 25rem;
+}
+
+:root {
+
+    --sapContent_FocusStyle: none !important;
+    --sapFontFamily: var(--mdc-typography-font-family) !important;
+}
+
+html {
+
+    --sapBrandColor: var(--mdc-theme-secondary) !important;
+    --sapBrandColor: var(--mdc-theme-secondary) !important;
+    --sapContent_BusyColor: var(--mdc-theme-secondary) !important;
+    --sapContent_IconColor: var(--mdc-theme-secondary) !important;
+    --sapHighlightColor: var(--mdc-theme-secondary) !important;
+    --sapTextColor: var(--mdc-theme-primary) !important;
+    --sapPageHeader_TextColor: var(--mdc-theme-primary) !important;
+    --sapField_Hover_BorderColor: var(--mdc-theme-secondary) !important;
+    --sapField_SuccessColor: var(--light-grey) !important;
+    --sapField_BorderCornerRadius: .3rem !important;
+    --sapElement_Height: 3rem !important;
+    --sapField_BorderColor: var(--light-grey) !important;
+    --sapContent_FocusColor: transparent !important;
+}
+
+
+ui5-label {
+    display: block;
+    font-size: .8rem;
+}
+
+
+ui5-button, ui5-carousel {
+    --_ui5-v1-17-0_button_base_height: 36px;
+    --_ui5-v1-17-0_button_emphasized_font_weight: normal;
+    --_ui5-v1-17-0_button_base_padding: 16px;
+    --_ui5-v1-17-0_button_focused_border: none;
+    --_ui5-v1-17-0_split_button_focused_border: none;
+    --sapContent_FocusColor: transparent;
+
+
+    --sapButton_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_BorderWidth: .0625rem;
+    --sapButton_BorderCornerRadius: .25rem;
+    --sapButton_TextColor: var(--mdc-theme-secondary);
+    --sapButton_Hover_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Hover_TextColor: var(--mdc-theme-secondary);
+    --sapButton_IconColor: var(--mdc-theme-secondary);
+    --sapButton_Active_Background: var(--mdc-theme-secondary);
+    --sapButton_Active_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Emphasized_Background: var(--mdc-theme-secondary);
+    --sapButton_Emphasized_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Emphasized_Hover_Background: var(--mdc-theme-secondary);
+    --sapButton_Emphasized_Hover_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Emphasized_Active_Background: var(--mdc-theme-secondary);
+    --sapButton_Emphasized_Active_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Lite_TextColor: var(--mdc-theme-secondary);
+    --sapButton_Lite_Hover_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Lite_Hover_TextColor: var(--mdc-theme-secondary);
+    --sapButton_Lite_Active_Background: var(--mdc-theme-secondary);
+    --sapButton_Lite_Active_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Selected_Background: var(--mdc-theme-secondary);
+    --sapButton_Selected_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Selected_Hover_Background: var(--mdc-theme-secondary);
+    --sapButton_Selected_Hover_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Information_Background: var(--mdc-theme-secondary);
+    --sapButton_Information_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Information_Hover_Background: var(--mdc-theme-secondary);
+    --sapButton_Information_Hover_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Information_Active_Background: var(--mdc-theme-secondary);
+    --sapButton_Information_Active_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Track_Hover_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Track_Selected_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Track_Selected_Hover_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Handle_Hover_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Handle_Selected_Background: var(--mdc-theme-secondary);
+    --sapButton_Handle_Selected_BorderColor: var(--mdc-theme-secondary);
+    --sapButton_Handle_Selected_Hover_Background: var(--mdc-theme-secondary);
+    --sapButton_Handle_Selected_Hover_BorderColor: var(--mdc-theme-secondary);
+
+}
+
+ui5-button:hover {
+    filter: brightness(95%);
+}
+
+ui5-select {
+    height: 3em;
+    border-radius: 4px;
+    --_ui5-v1-17-0_input_icon_padding: .9em;
+}
+
+ui5-li {
+    height: 3rem;
+}
+
+ui5-bar {
+    height: 4rem;
+}
+
+ui5-tree {
+    --_ui5-tree-indent-step: 1.8rem;
+}
+
+ui5-button.button-chip {
+    border-radius: 20px;
+    height: 2em;
+    --sapButton_BorderColor: var(--light-grey);
+}
+
+ui5-button.icon{
+    --sapButton_Lite_Hover_BorderColor: white;
+    --sapButton_Lite_Hover_Background: white;
+    border-radius: 1.1rem;
+    --sapButton_Lite_Active_Background: white;
+    --sapButton_Active_TextColor: var(--mdc-theme-secondary)
+}
+
+ui5-dialog {
+    --_ui5-v1-17-0_popup_content_padding_s: 1.5rem;
+    --_ui5-v1-17-0_popup_header_footer_padding_s: 1.5rem;
+}
+
+ui5-input, ui5-textarea {
+    --sapField_InformationColor: var(--mdc-theme-secondary) !important;
+    --sapField_Hover_BorderColor: var(--mdc-theme-secondary) !important;
+    --sapField_TextColor:  var(--mdc-theme-primary) !important;
+
+    --sapField_Active_BorderColor: var(--mdc-theme-secondary) !important;
+
+    --sapField_InformationColor: var(--mdc-theme-secondary) !important;
+
+    --_ui5-v1-17-0_input_state_border_width: .09rem;
+    --_ui5-v1-17-0_textarea_state_border_width: .09rem;
+
+}
+
+ui5-input:hover, ui5-textarea:hover, ui5-input:focus, ui5-input:active, ui5-textarea:focus, ui5-textarea:active {
+    border-color: var(--mdc-theme-secondary) !important;
+    --sapField_BorderWidth: .12rem !important;
+    --sapField_SuccessColor: var(--mdc-theme-secondary) !important;
+    --_ui5-v1-17-0_input_state_border_width: .12rem;
+    --_ui5-v1-17-0_textarea_state_border_width: .12rem;
+}
+
+ui5-label.invalid {
+    color: var(--sapField_InvalidColor);
+}
+
+ui5-carousel {
+    --ui5-v1-17-0_carousel_background_color_translucent: white;
+    --sapElement_BorderWidth: 0px;
+}
