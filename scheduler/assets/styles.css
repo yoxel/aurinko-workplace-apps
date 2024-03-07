@@ -27,7 +27,7 @@
 
 :root {
     /*--day-width: 4rem;*/
-    
+
     --mdc-theme-on-primary: white;
     --mdc-typography-font-family: 'Nunito', 'Noto', sans-serif;
 
@@ -183,8 +183,6 @@ mwc-circular-progress {
     grid-template-columns: repeat(7, 1fr);
     gap: 0 10px;
     justify-content: space-between;
-    max-width: 37rem;
-    min-width: 23rem;
 }
 
 .growing-block {
@@ -198,7 +196,7 @@ mwc-circular-progress {
     font-size: 1rem;
     user-select: none;
     margin-bottom: .5rem;
-    padding: .5rem 0;
+    padding: .4rem 0;
 }
 
 .month-day.disabled {
@@ -276,9 +274,8 @@ ui5-carousel {
 html {
 
     --sapBrandColor: var(--mdc-theme-secondary) !important;
-    --sapBrandColor: var(--mdc-theme-secondary) !important;
     --sapContent_BusyColor: var(--mdc-theme-secondary) !important;
-    --sapContent_IconColor: var(--mdc-theme-secondary) !important;
+    --sapContent_IconColor: var(--grey) !important;
     --sapHighlightColor: var(--mdc-theme-secondary) !important;
     --sapTextColor: var(--mdc-theme-primary) !important;
     --sapPageHeader_TextColor: var(--mdc-theme-primary) !important;
