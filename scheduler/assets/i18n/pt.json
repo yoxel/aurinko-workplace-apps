@@ -1,0 +1,39 @@
+{
+  "messages" : {
+    "successMessage" : "Sua reunião em {0} às {1} está agendada",
+    "meetingTimeMessage" : "Reunião em {0} das {1} às {2}"
+  },
+  "exceptions" : {
+    "commonException" : "Desculpe pelo inconveniente, mas o calendário não está disponível no momento.",
+    "schedulingFailedException" : "Não conseguiu marcar uma reunião.",
+    "xhrFailedException" : "Falha ao obter a resposta do servidor. Tente atualizar a página.",
+    "unknownHttpException" : "Falha ao obter a resposta do servidor.",
+    "alreadyScheduledException" : "Parece que este intervalo de tempo já foi reservado. Por favor, selecione outro horário."
+  },
+  "buttons" : {
+    "close" : "Fechar",
+    "submit" : "Enviar",
+    "schedule" : "Agendar",
+    "cancel" : "Cancelar"
+  },
+  "forms" : {
+    "nameInputError" : "Por favor, insira seu nome",
+    "name" : "Nome",
+    "email" : "E-mail",
+    "emptyInputError" : "Por favor, insira um valor",
+    "emailInputError" : "Por favor, insira um e-mail válido"
+  },
+  "subtitles" : {
+    "pickADay" : "Por favor, escolha um dia",
+    "pickATime" : "Por favor, escolha um horário"
+  },
+  "titles" : {
+    "bookingTitlePrefix" : "Reserva para",
+    "bookingTitlePlaceholder" : "Agendar a reunião",
+    "confirmationTitle" : "Сonfirmação",
+    "successTitle" : "Sucesso"
+  },
+  "help" : {
+    "timeZoneMessage" : "Os horários são mostrados no fuso horário {0}."
+  }
+}

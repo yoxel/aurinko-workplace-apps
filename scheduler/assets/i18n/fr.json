@@ -1,0 +1,39 @@
+{
+  "messages" : {
+    "successMessage" : "Votre réunion du {0} à {1} est prévue.",
+    "meetingTimeMessage" : "Réunion le {0} de {1} à {2}"
+  },
+  "exceptions" : {
+    "commonException" : "Désolé pour le désagrément, mais le calendrier n'est pas disponible pour le moment.",
+    "schedulingFailedException" : "N'a pas réussi à planifier une réunion.",
+    "xhrFailedException" : "Échec de la réponse du serveur. Veuillez essayer d'actualiser la page.",
+    "unknownHttpException" : "Échec de la réponse du serveur.",
+    "alreadyScheduledException" : "Il semble que cette plage horaire a déjà été réservée. Veuillez sélectionner un autre moment."
+  },
+  "buttons" : {
+    "close" : "Fermer",
+    "submit" : "Soumettre",
+    "schedule" : "Planifier",
+    "cancel" : "Annuler"
+  },
+  "forms" : {
+    "nameInputError" : "Veuillez saisir votre nom",
+    "name" : "Nom",
+    "email" : "Email",
+    "emptyInputError" : "Veuillez saisir une valeur",
+    "emailInputError" : "Veuillez saisir une adresse email valide"
+  },
+  "subtitles" : {
+    "pickADay" : "Veuillez choisir un jour",
+    "pickATime" : "Veuillez choisir une heure"
+  },
+  "titles" : {
+    "bookingTitlePrefix" : "Réservation pour",
+    "bookingTitlePlaceholder" : "Réservez la réunion",
+    "confirmationTitle" : "Confirmation",
+    "successTitle" : "Succès"
+  },
+  "help" : {
+    "timeZoneMessage" : "Les heures sont indiquées dans le fuseau horaire {0}."
+  }
+}

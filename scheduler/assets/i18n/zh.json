@@ -1,0 +1,39 @@
+{
+  "messages" : {
+    "successMessage" : "您于 {0} 在 {1} 的会议已安排好。",
+    "meetingTimeMessage" : "会议于{0}从{1}到{2}。"
+  },
+  "exceptions" : {
+    "commonException" : "抱歉，但当前日历不可用。",
+    "schedulingFailedException" : "未能安排会议。",
+    "xhrFailedException" : "获取服务器响应失败。请尝试刷新页面。",
+    "unknownHttpException" : "获取服务器响应失败。",
+    "alreadyScheduledException" : "看起来这个时间范围已经被占用。请选择其他时间。"
+  },
+  "buttons" : {
+    "close" : "关闭",
+    "submit" : "提交",
+    "schedule" : "规划",
+    "cancel" : "取消"
+  },
+  "forms" : {
+    "nameInputError" : "请输入您的姓名",
+    "name" : "姓名",
+    "email" : "电子邮件",
+    "emptyInputError" : "请输入一个值",
+    "emailInputError" : "请输入有效的电子邮件"
+  },
+  "subtitles" : {
+    "pickADay" : "请选择日期",
+    "pickATime" : "请选择时间"
+  },
+  "titles" : {
+    "bookingTitlePrefix" : "预订",
+    "bookingTitlePlaceholder" : "预订会议",
+    "confirmationTitle" : "确认",
+    "successTitle" : "成功"
+  },
+  "help" : {
+    "timeZoneMessage" : "时间以{0}时区显示。"
+  }
+}

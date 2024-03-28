@@ -1,0 +1,39 @@
+{
+  "messages" : {
+    "successMessage" : "Your meeting on {0} at {1} is scheduled.",
+    "meetingTimeMessage" : "Meeting on {0} from {1} to {2}"
+  },
+  "exceptions" : {
+    "commonException" : "Sorry for inconvenience but the calendar is not available at the moment.",
+    "schedulingFailedException" : "Failed to schedule a meeting.",
+    "xhrFailedException" : "Failed to get server response. Please try refreshing the page.",
+    "unknownHttpException" : "Failed to get server response.",
+    "alreadyScheduledException" : "It looks like this time range has already been taken. Please select another time."
+  },
+  "buttons" : {
+    "close" : "Close",
+    "submit" : "Submit",
+    "schedule" : "Schedule",
+    "cancel" : "Cancel"
+  },
+  "forms" : {
+    "nameInputError" : "Please enter your name",
+    "name" : "Name",
+    "email" : "Email",
+    "emptyInputError" : "Please enter a value",
+    "emailInputError" : "Please enter a valid email"
+  },
+  "subtitles" : {
+    "pickADay" : "Please pick a day",
+    "pickATime" : "Please pick a time"
+  },
+  "titles" : {
+    "bookingTitlePrefix" : "Booking for",
+    "bookingTitlePlaceholder" : "Book the meeting",
+    "confirmationTitle" : "Confirmation",
+    "successTitle" : "Success"
+  },
+  "help" : {
+    "timeZoneMessage" : "Times are shown in {0} timezone."
+  }
+}
