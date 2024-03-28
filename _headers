@@ -3,6 +3,3 @@
   Content-Security-Policy: default-src 'self'; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com https://sdk.openui5.org; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src 'self' https://aurinko.yoxel.com https://api.aurinko.io https://asti.aurinko.io; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.microsoft.com https://ajax.aspnetcdn.com https://api.aurinko.io https://aurinko.yoxel.com;
   Referrer-Policy: same-origin
   X-Content-Type-Options: nosniff
-
-/scheduler/assets/i18n/*
-  Access-Control-Allow-Origin: *
