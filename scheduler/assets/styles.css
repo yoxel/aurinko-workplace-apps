@@ -69,6 +69,14 @@ body {
     color: var(--mdc-theme-primary);
 }
 
+.text-smaller {
+    font-size: .9rem !important;
+}
+
+.text-small {
+    font-size: .8rem !important;
+}
+
 .no-shadow {
     box-shadow: none !important;
 }
