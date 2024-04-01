@@ -13,7 +13,7 @@
   "buttons" : {
     "close" : "关闭",
     "submit" : "提交",
-    "schedule" : "规划",
+    "schedule" : "安排時間",
     "cancel" : "取消"
   },
   "forms" : {
