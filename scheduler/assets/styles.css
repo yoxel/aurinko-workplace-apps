@@ -170,7 +170,7 @@ body {
     gap: 2rem !important;
   }
 }
-
+  
 @media screen and (max-width: 780px), screen and (max-width: 1100px) and (min-aspect-ratio: 0.7) {
   .month-layout-container {
     flex-direction: column;
@@ -178,9 +178,6 @@ body {
     gap: 1rem !important;
   }
 }
-
-
-
 
 
 
