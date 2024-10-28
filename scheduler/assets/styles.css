@@ -164,6 +164,25 @@ body {
     flex-grow: 1;
 }
 
+@media screen and (max-width: 780px) {
+  .horizontal-scheduler-container {
+    gap: 2rem !important;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .month-layout-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem !important;
+  }
+}
+
+
+
+
+
+
 .month-day {
 
     text-align: center;
