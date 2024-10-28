@@ -165,19 +165,22 @@ body {
 }
 
 
-@media screen and (max-width: 780px), screen and (max-width: 1100px) and (min-aspect-ratio: 0.7) {
+@media screen and (max-width: 710px), screen and (max-width: 1000px) and (max-aspect-ratio: 4 / 5) {
   .horizontal-scheduler-container {
     gap: 2rem !important;
   }
 }
-  
-@media screen and (max-width: 780px), screen and (max-width: 1100px) and (min-aspect-ratio: 0.7) {
+
+@media screen and (max-width: 710px), screen and (max-width: 1000px) and (max-aspect-ratio: 4 / 5) {
   .month-layout-container {
     flex-direction: column;
     align-items: center;
     gap: 1rem !important;
   }
 }
+
+
+
 
 
 
