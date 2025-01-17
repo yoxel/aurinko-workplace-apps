@@ -1,7 +1,7 @@
 {
   "messages" : {
-    "successMessage" : "Sua reunião em {0} às {1} está agendada",
-    "meetingTimeMessage" : "Reunião em {0} das {1} às {2}"
+    "successMessage" : "Sua {0} em {1} às {2} está agendada",
+    "meetingTimeMessage" : "{0} em {1} das {2} às {3}"
   },
   "exceptions" : {
     "commonException" : "Desculpe pelo inconveniente, mas o calendário não está disponível no momento.",
@@ -9,6 +9,9 @@
     "xhrFailedException" : "Falha ao obter a resposta do servidor. Tente atualizar a página.",
     "unknownHttpException" : "Falha ao obter a resposta do servidor.",
     "alreadyScheduledException" : "Parece que este intervalo de tempo já foi reservado. Por favor, selecione outro horário."
+  },
+  "prefixes" : {
+    "eventPrefix" : "reunião"
   },
   "buttons" : {
     "close" : "Fechar",

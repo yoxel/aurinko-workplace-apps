@@ -1,7 +1,7 @@
 {
   "messages" : {
-    "successMessage" : "您于 {0} 在 {1} 的会议已安排好。",
-    "meetingTimeMessage" : "会议于{0}从{1}到{2}。"
+    "successMessage" : "{0}于 {1} 在 {2} 的会议已安排好。",
+    "meetingTimeMessage" : "{0}于{1}从{2}到{3}。"
   },
   "exceptions" : {
     "commonException" : "抱歉，但当前日历不可用。",
@@ -9,6 +9,9 @@
     "xhrFailedException" : "获取服务器响应失败。请尝试刷新页面。",
     "unknownHttpException" : "获取服务器响应失败。",
     "alreadyScheduledException" : "看起来这个时间范围已经被占用。请选择其他时间。"
+  },
+  "prefixes" : {
+    "eventPrefix" : "会议"
   },
   "buttons" : {
     "close" : "关闭",

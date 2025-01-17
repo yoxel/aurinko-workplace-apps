@@ -1,7 +1,7 @@
 {
   "messages" : {
-    "successMessage" : "Votre réunion du {0} à {1} est prévue.",
-    "meetingTimeMessage" : "Réunion le {0} de {1} à {2}"
+    "successMessage" : "Votre {0} du {1} à {2} est prévue.",
+    "meetingTimeMessage" : "{0} le {1} de {2} à {3}"
   },
   "exceptions" : {
     "commonException" : "Désolé pour le désagrément, mais le calendrier n'est pas disponible pour le moment.",
@@ -9,6 +9,9 @@
     "xhrFailedException" : "Échec de la réponse du serveur. Veuillez essayer d'actualiser la page.",
     "unknownHttpException" : "Échec de la réponse du serveur.",
     "alreadyScheduledException" : "Il semble que cette plage horaire a déjà été réservée. Veuillez sélectionner un autre moment."
+  },
+  "prefixes" : {
+    "eventPrefix" : "réunion"
   },
   "buttons" : {
     "close" : "Fermer",

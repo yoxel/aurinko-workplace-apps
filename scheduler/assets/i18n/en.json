@@ -1,7 +1,7 @@
 {
   "messages" : {
-    "successMessage" : "Your meeting on {0} at {1} is scheduled.",
-    "meetingTimeMessage" : "Meeting on {0} from {1} to {2}"
+    "successMessage" : "Your {0} on {1} at {2} is scheduled.",
+    "meetingTimeMessage" : "{0} on {1} from {2} to {3}"
   },
   "exceptions" : {
     "commonException" : "Sorry for inconvenience but the calendar is not available at the moment.",
@@ -9,6 +9,9 @@
     "xhrFailedException" : "Failed to get server response. Please try refreshing the page.",
     "unknownHttpException" : "Failed to get server response.",
     "alreadyScheduledException" : "It looks like this time range has already been taken. Please select another time."
+  },
+  "prefixes" : {
+    "eventPrefix" : "meeting"
   },
   "buttons" : {
     "close" : "Close",
