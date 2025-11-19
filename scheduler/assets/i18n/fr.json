@@ -1,30 +1,37 @@
 {
   "messages" : {
     "successMessage" : "Votre {0} du {1} à {2} est prévue.",
-    "meetingTimeMessage" : "{0} le {1} de {2} à {3}"
+    "meetingTimeMessage" : "{0} le {1} de {2} à {3}",
+    "reschedulingSubtitle" : "Report de votre {0} du {1} de {2} à {3}",
+    "refreshDataMessage" : "Pour des raisons de sécurité et d'exactitude, les données de cette page seront automatiquement rechargées dans {0} secondes."
   },
   "exceptions" : {
     "commonException" : "Désolé pour le désagrément, mais le calendrier n'est pas disponible pour le moment.",
     "schedulingFailedException" : "N'a pas réussi à planifier une réunion.",
     "xhrFailedException" : "Échec de la réponse du serveur. Veuillez essayer d'actualiser la page.",
     "unknownHttpException" : "Échec de la réponse du serveur.",
-    "alreadyScheduledException" : "Il semble que cette plage horaire a déjà été réservée. Veuillez sélectionner un autre moment."
+    "alreadyScheduledException" : "Il semble que cette plage horaire a déjà été réservée. Veuillez sélectionner un autre moment.",
+    "invalidRescheduleToken" : "Le jeton de reprogrammation n'est pas valide.",
+    "wrongReschedulingEmail" : "Adresse e-mail incorrecte. Seule la personne qui a réservé cette réunion peut la reprogrammer."
   },
   "prefixes" : {
     "eventPrefix" : "réunion"
   },
   "buttons" : {
-    "close" : "Fermer",
+    "cancel" : "Annuler",
+    "inviteGuest" : "+ Inviter un invité",
     "submit" : "Soumettre",
     "schedule" : "Planifier",
-    "cancel" : "Annuler"
+    "close" : "Fermer"
   },
   "forms" : {
     "nameInputError" : "Veuillez saisir votre nom",
     "name" : "Nom",
     "email" : "Email",
     "emptyInputError" : "Veuillez saisir une valeur",
-    "emailInputError" : "Veuillez saisir une adresse email valide"
+    "inviteeEmail" : "E-mail de l'invité",
+    "emailInputError" : "Veuillez saisir une adresse email valide",
+    "inviteeName" : "Nom de l'invité"
   },
   "subtitles" : {
     "pickADay" : "Veuillez choisir un jour",

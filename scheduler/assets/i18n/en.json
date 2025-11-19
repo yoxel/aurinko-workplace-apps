@@ -1,30 +1,37 @@
 {
   "messages" : {
     "successMessage" : "Your {0} on {1} at {2} is scheduled.",
-    "meetingTimeMessage" : "{0} on {1} from {2} to {3}"
+    "meetingTimeMessage" : "{0} on {1} from {2} to {3}",
+    "reschedulingSubtitle" : "Rescheduling your {0} on {1} from {2} to {3}",
+    "refreshDataMessage" : "For security and accuracy, the data on this page will auto-reload in {0} seconds."
   },
   "exceptions" : {
     "commonException" : "Sorry for inconvenience but the calendar is not available at the moment.",
     "schedulingFailedException" : "Failed to schedule a meeting.",
     "xhrFailedException" : "Failed to get server response. Please try refreshing the page.",
     "unknownHttpException" : "Failed to get server response.",
-    "alreadyScheduledException" : "It looks like this time range has already been taken. Please select another time."
+    "alreadyScheduledException" : "It looks like this time range has already been taken. Please select another time.",
+    "invalidRescheduleToken" : "Reschedule token is not valid.",
+    "wrongReschedulingEmail" : "Email mismatch. This meeting can only be rescheduled by the person who booked it."
   },
   "prefixes" : {
     "eventPrefix" : "meeting"
   },
   "buttons" : {
-    "close" : "Close",
+    "cancel" : "Cancel",
+    "inviteGuest" : "+ Invite guest",
     "submit" : "Submit",
     "schedule" : "Schedule",
-    "cancel" : "Cancel"
+    "close" : "Close"
   },
   "forms" : {
     "nameInputError" : "Please enter your name",
     "name" : "Name",
     "email" : "Email",
     "emptyInputError" : "Please enter a value",
-    "emailInputError" : "Please enter a valid email"
+    "inviteeEmail" : "Invitee email",
+    "emailInputError" : "Please enter a valid email",
+    "inviteeName" : "Invitee name"
   },
   "subtitles" : {
     "pickADay" : "Please pick a day",

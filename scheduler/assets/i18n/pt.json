@@ -1,30 +1,37 @@
 {
   "messages" : {
     "successMessage" : "Sua {0} em {1} às {2} está agendada",
-    "meetingTimeMessage" : "{0} em {1} das {2} às {3}"
+    "meetingTimeMessage" : "{0} em {1} das {2} às {3}",
+    "reschedulingSubtitle" : "Remarcação do seu {0} em {1} das {2} às {3}",
+    "refreshDataMessage" : "Por motivos de segurança e precisão, os dados nesta página serão recarregados automaticamente em {0} segundos."
   },
   "exceptions" : {
     "commonException" : "Desculpe pelo inconveniente, mas o calendário não está disponível no momento.",
     "schedulingFailedException" : "Não conseguiu marcar uma reunião.",
     "xhrFailedException" : "Falha ao obter a resposta do servidor. Tente atualizar a página.",
     "unknownHttpException" : "Falha ao obter a resposta do servidor.",
-    "alreadyScheduledException" : "Parece que este intervalo de tempo já foi reservado. Por favor, selecione outro horário."
+    "alreadyScheduledException" : "Parece que este intervalo de tempo já foi reservado. Por favor, selecione outro horário.",
+    "invalidRescheduleToken" : "O token de reprogramação não é válido.",
+    "wrongReschedulingEmail" : "Incompatibilidade de e-mail. Esta reunião só pode ser remarcada pela pessoa que a agendou."
   },
   "prefixes" : {
     "eventPrefix" : "reunião"
   },
   "buttons" : {
-    "close" : "Fechar",
+    "cancel" : "Cancelar",
+    "inviteGuest" : "+ Convidar convidado",
     "submit" : "Enviar",
     "schedule" : "Agendar",
-    "cancel" : "Cancelar"
+    "close" : "Fechar"
   },
   "forms" : {
     "nameInputError" : "Por favor, insira seu nome",
     "name" : "Nome",
     "email" : "E-mail",
     "emptyInputError" : "Por favor, insira um valor",
-    "emailInputError" : "Por favor, insira um e-mail válido"
+    "inviteeEmail" : "E-mail do convidado",
+    "emailInputError" : "Por favor, insira um e-mail válido",
+    "inviteeName" : "Nome do convidado"
   },
   "subtitles" : {
     "pickADay" : "Por favor, escolha um dia",
