@@ -1,9 +1,10 @@
 {
   "messages" : {
-    "successMessage" : "Your {0} on {1} at {2} is scheduled.",
-    "meetingTimeMessage" : "{0} on {1} from {2} to {3}",
     "reschedulingSubtitle" : "Rescheduling your {0} on {1} from {2} to {3}",
-    "refreshDataMessage" : "For security and accuracy, the data on this page will auto-reload in {0} seconds."
+    "successMessage" : "Your {0} on {1} at {2} is scheduled.",
+    "internalAttendeesMessage" : "Note: {0} will also be invited.",
+    "refreshDataMessage" : "For security and accuracy, the data on this page will auto-reload in {0} seconds.",
+    "meetingTimeMessage" : "{0} on {1} from {2} to {3}"
   },
   "exceptions" : {
     "commonException" : "Sorry for inconvenience but the calendar is not available at the moment.",

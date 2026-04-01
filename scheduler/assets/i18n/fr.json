@@ -1,9 +1,10 @@
 {
   "messages" : {
-    "successMessage" : "Votre {0} du {1} à {2} est prévue.",
-    "meetingTimeMessage" : "{0} le {1} de {2} à {3}",
     "reschedulingSubtitle" : "Report de votre {0} du {1} de {2} à {3}",
-    "refreshDataMessage" : "Pour des raisons de sécurité et d'exactitude, les données de cette page seront automatiquement rechargées dans {0} secondes."
+    "successMessage" : "Votre {0} du {1} à {2} est prévue.",
+    "internalAttendeesMessage" : "Remarque : {0} seront également invités.",
+    "refreshDataMessage" : "Pour des raisons de sécurité et d'exactitude, les données de cette page seront automatiquement rechargées dans {0} secondes.",
+    "meetingTimeMessage" : "{0} le {1} de {2} à {3}"
   },
   "exceptions" : {
     "commonException" : "Désolé pour le désagrément, mais le calendrier n'est pas disponible pour le moment.",

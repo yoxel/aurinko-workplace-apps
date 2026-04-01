@@ -1,9 +1,10 @@
 {
   "messages" : {
-    "successMessage" : "Sua {0} em {1} às {2} está agendada",
-    "meetingTimeMessage" : "{0} em {1} das {2} às {3}",
     "reschedulingSubtitle" : "Remarcação do seu {0} em {1} das {2} às {3}",
-    "refreshDataMessage" : "Por motivos de segurança e precisão, os dados nesta página serão recarregados automaticamente em {0} segundos."
+    "successMessage" : "Sua {0} em {1} às {2} está agendada",
+    "internalAttendeesMessage" : "Observação: {0} também serão convidados.",
+    "refreshDataMessage" : "Por motivos de segurança e precisão, os dados nesta página serão recarregados automaticamente em {0} segundos.",
+    "meetingTimeMessage" : "{0} em {1} das {2} às {3}"
   },
   "exceptions" : {
     "commonException" : "Desculpe pelo inconveniente, mas o calendário não está disponível no momento.",

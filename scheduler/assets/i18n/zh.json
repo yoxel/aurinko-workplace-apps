@@ -1,9 +1,10 @@
 {
   "messages" : {
-    "successMessage" : "{0}于 {1} 在 {2} 的会议已安排好。",
-    "meetingTimeMessage" : "{0}于{1}从{2}到{3}。",
     "reschedulingSubtitle" : "將您的 {0}于{1}从{2}到{3}。",
-    "refreshDataMessage" : "基於安全與準確性考量，本頁數據將於 {0} 秒後自動重新載入。"
+    "successMessage" : "{0}于 {1} 在 {2} 的会议已安排好。",
+    "internalAttendeesMessage" : "注意：{0} 也将被邀请。.",
+    "refreshDataMessage" : "基於安全與準確性考量，本頁數據將於 {0} 秒後自動重新載入。",
+    "meetingTimeMessage" : "{0}于{1}从{2}到{3}。"
   },
   "exceptions" : {
     "commonException" : "抱歉，但当前日历不可用。",
